@@ -22,31 +22,37 @@ const CTASection: React.FC<CTASectionProps> = ({
 }) => {
   return (
     <section className="section-padding relative overflow-hidden">
-      <div className="absolute inset-0 bg-gradient-radial from-primary/5 to-transparent -z-10" />
-      <div className="absolute inset-0 bg-[url('/grid.svg')] bg-center [mask-image:radial-gradient(white,transparent_80%)] -z-10" />
+      <div className="absolute inset-0 bg-[url('/grid.svg')] bg-center opacity-5" />
       
-      <div className="container-custom">
-        <div className="max-w-3xl mx-auto text-center">
-          <h2 className="text-3xl md:text-4xl font-bold font-outfit tracking-tight mb-4">
+      <div className="container-custom relative z-10">
+        <div className="max-w-3xl mx-auto text-center space-y-6">
+          <h2 className="text-4xl md:text-5xl font-bold font-outfit tracking-tight">
             {title}
           </h2>
           
           {subtitle && (
-            <p className="text-xl text-muted-foreground mb-8 max-w-2xl mx-auto">
+            <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
               {subtitle}
             </p>
           )}
           
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link to={buttonLink} className="group">
-              <Button size="lg" className="btn-primary group-hover:brightness-110 transition-all duration-300">
+          <div className="flex flex-col sm:flex-row gap-4 justify-center pt-4">
+            <Link to={buttonLink}>
+              <Button 
+                size="lg" 
+                className="bg-[#7C5DF2] hover:bg-[#6B4BE1] text-white px-8 py-6 text-base font-medium rounded-lg transition-all duration-200"
+              >
                 {buttonText}
               </Button>
             </Link>
             
             {secondaryButtonText && secondaryButtonLink && (
               <Link to={secondaryButtonLink}>
-                <Button variant="outline" size="lg">
+                <Button 
+                  variant="outline" 
+                  size="lg"
+                  className="px-8 py-6 text-base font-medium border-muted-foreground/20 hover:bg-secondary/80"
+                >
                   {secondaryButtonText}
                 </Button>
               </Link>
