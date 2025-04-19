@@ -22,6 +22,7 @@ import {
   Cloud,
   Database
 } from 'lucide-react';
+import CloudTechnologies from '@/components/sections/CloudTechnologies';
 
 const Index = () => {
   useEffect(() => {
@@ -90,54 +91,8 @@ const Index = () => {
         </div>
       </section>
 
-      {/* Cloud Technologies Showcase */}
-      <section className="py-16 bg-[#F8F6FF] dark:bg-purple-900/10 relative overflow-hidden">
-        <div className="absolute inset-0 bg-[url('/grid.svg')] bg-center [mask-image:radial-gradient(white,transparent_85%)] opacity-30" />
-        
-        <div className="container-custom relative">
-          <div className="text-center mb-12">
-            <h2 className="text-2xl md:text-3xl font-semibold mb-3 font-outfit">Powered By Modern Cloud Technologies</h2>
-            <p className="text-muted-foreground">Build scalable architectures with industry-leading cloud providers and tools</p>
-          </div>
-
-          <div className="flex overflow-hidden relative">
-            <div className="flex animate-infinite-scroll gap-12 items-center">
-              {/* Azure */}
-              <div className="flex flex-col items-center min-w-[200px] p-4">
-                <div className="h-12 text-[#008AD7] dark:text-[#008AD7]/90 mb-2">
-                  <Cloud className="h-12 w-12" strokeWidth={1} />
-                </div>
-                <span className="text-sm font-medium">Microsoft Azure</span>
-              </div>
-
-              {/* GCP */}
-              <div className="flex flex-col items-center min-w-[200px] p-4">
-                <div className="h-12 text-[#4285F4] dark:text-[#4285F4]/90 mb-2">
-                  <Cloud className="h-12 w-12" strokeWidth={1} />
-                </div>
-                <span className="text-sm font-medium">Google Cloud Platform</span>
-              </div>
-
-              {/* Kubernetes */}
-              <div className="flex flex-col items-center min-w-[200px] p-4">
-                <div className="h-12 text-[#326CE5] dark:text-[#326CE5]/90 mb-2">
-                  <Database className="h-12 w-12" strokeWidth={1} />
-                </div>
-                <span className="text-sm font-medium">Kubernetes</span>
-              </div>
-
-              {/* Duplicate for infinite scroll */}
-              {/* Azure */}
-              <div className="flex flex-col items-center min-w-[200px] p-4">
-                <div className="h-12 text-[#008AD7] dark:text-[#008AD7]/90 mb-2">
-                  <Cloud className="h-12 w-12" strokeWidth={1} />
-                </div>
-                <span className="text-sm font-medium">Microsoft Azure</span>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
+      {/* Cloud Technologies Section */}
+      <CloudTechnologies />
 
       {/* How It Works */}
       <section className="section-padding animate-on-scroll">
