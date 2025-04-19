@@ -1,12 +1,9 @@
-
 import React from 'react';
 import { cn } from '@/lib/utils';
-
 interface StyledBoxProps {
   className?: string;
   children?: React.ReactNode;
 }
-
 const StyledBox = ({
   className,
   children
@@ -30,10 +27,9 @@ const StyledBox = ({
         
         {/* Subtle border highlight on hover with improved visibility */}
         <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-all duration-500">
-          <div className="absolute inset-px rounded-xl bg-gradient-to-br from-white/30 via-white/10 to-transparent"></div>
+          <div className="absolute inset-px rounded-xl bg-gradient-to-br from-white/30 via-white/10 to-transparent bg-zinc-100"></div>
         </div>
       </div>
     </div>;
 };
-
 export default StyledBox;
