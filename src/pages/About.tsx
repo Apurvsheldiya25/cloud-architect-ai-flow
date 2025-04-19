@@ -45,90 +45,94 @@ const About = () => {
         </div>
       </section>
 
-      {/* About Content with enhanced visuals */}
-      <section className="py-16">
-        <div className="container-custom">
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center mb-24">
-            <div>
-              <div className="relative rounded-2xl overflow-hidden">
-                <div className="absolute inset-0 bg-gradient-to-r from-primary/20 to-purple-600/20 mix-blend-overlay" />
-                <div className="relative rounded-xl overflow-hidden border border-border">
+      {/* About Content Section - Redesigned for better professionalism */}
+      <section className="relative py-24 overflow-hidden bg-gradient-to-b from-background to-background/95">
+        <div className="absolute inset-0 bg-[url('/grid.svg')] bg-center [mask-image:radial-gradient(white,transparent_85%)] opacity-10" />
+        
+        <div className="container-custom relative">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center mb-32">
+            <div className="relative group">
+              <div className="absolute inset-0 bg-gradient-to-r from-primary/20 to-purple-600/20 blur-2xl transform group-hover:scale-105 transition-transform duration-500" />
+              <div className="relative">
+                <div className="rounded-2xl overflow-hidden border border-border/50 shadow-xl">
                   <img 
                     src="https://images.unsplash.com/photo-1461749280684-dccba630e2f6?auto=format&fit=crop&w=1200&h=800" 
                     alt="Founder working on code" 
-                    className="w-full"
+                    className="w-full h-[500px] object-cover hover:scale-105 transition-transform duration-500"
                   />
                 </div>
               </div>
             </div>
-            <div className="space-y-6">
-              <h2 className="text-3xl font-bold font-outfit tracking-tight">Meet the Founder</h2>
-              <p className="text-muted-foreground text-lg mb-6">
+
+            <div className="space-y-8">
+              <div>
+                <h2 className="text-4xl font-bold font-outfit tracking-tight mb-4 bg-gradient-to-r from-foreground to-foreground/80 bg-clip-text text-transparent">
+                  Meet the Founder
+                </h2>
+                <div className="h-1 w-20 bg-primary rounded mb-6" />
+              </div>
+              
+              <p className="text-muted-foreground text-lg leading-relaxed">
                 Apurv, the solo founder of Arch AI, created this product after years in SaaS and cloud architecture design. With a background in both software development and infrastructure engineering, he experienced firsthand the inefficiencies in cloud architecture planning.
               </p>
-              <p className="text-muted-foreground text-lg mb-6">
+              <p className="text-muted-foreground text-lg leading-relaxed">
                 After spending countless hours designing and redesigning cloud architectures manually, Apurv decided to build Arch AI - a tool that leverages AI to make cloud infrastructure planning as simple as having a conversation.
               </p>
-              <p className="text-muted-foreground text-lg">
+              <p className="text-muted-foreground text-lg leading-relaxed">
                 Arch AI is bootstrapped, AI-powered, and built to scale with the needs of developers, architects, and teams of all sizes.
               </p>
             </div>
           </div>
 
-          {/* Values Section with new card design */}
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
-            <div className="order-2 md:order-1">
-              <h2 className="text-3xl font-bold font-outfit tracking-tight mb-8">Our Values</h2>
-              <ul className="space-y-6">
-                <li className="flex items-start">
-                  <CheckCircle className="h-6 w-6 text-primary shrink-0 mr-3 mt-1" />
-                  <div>
-                    <h3 className="font-semibold text-lg mb-1">Simplicity First</h3>
-                    <p className="text-muted-foreground">
-                      We believe complex cloud infrastructure shouldn't require complex tools. Everything we build aims to simplify the process.
-                    </p>
-                  </div>
-                </li>
-                <li className="flex items-start">
-                  <CheckCircle className="h-6 w-6 text-primary shrink-0 mr-3 mt-1" />
-                  <div>
-                    <h3 className="font-semibold text-lg mb-1">Best Practices by Default</h3>
-                    <p className="text-muted-foreground">
-                      Our AI is designed to incorporate security, reliability, and cost optimization best practices automatically.
-                    </p>
-                  </div>
-                </li>
-                <li className="flex items-start">
-                  <CheckCircle className="h-6 w-6 text-primary shrink-0 mr-3 mt-1" />
-                  <div>
-                    <h3 className="font-semibold text-lg mb-1">Continuous Learning</h3>
-                    <p className="text-muted-foreground">
-                      Our AI models improve with each architecture created, learning from the collective wisdom of our users.
-                    </p>
-                  </div>
-                </li>
-                <li className="flex items-start">
-                  <CheckCircle className="h-6 w-6 text-primary shrink-0 mr-3 mt-1" />
-                  <div>
-                    <h3 className="font-semibold text-lg mb-1">User-Centric Design</h3>
-                    <p className="text-muted-foreground">
-                      Every feature we build starts with understanding the real needs of cloud builders.
-                    </p>
-                  </div>
-                </li>
-              </ul>
+          {/* Values Section - Enhanced with cards */}
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-start">
+            <div className="lg:sticky lg:top-24">
+              <h2 className="text-4xl font-bold font-outfit tracking-tight mb-4 bg-gradient-to-r from-foreground to-foreground/80 bg-clip-text text-transparent">
+                Our Values
+              </h2>
+              <div className="h-1 w-20 bg-primary rounded mb-6" />
+              <p className="text-xl text-muted-foreground leading-relaxed mb-8">
+                We believe in simplicity, excellence, and continuous innovation in everything we do.
+              </p>
             </div>
-            <div className="order-1 md:order-2">
-              <div className="relative rounded-2xl overflow-hidden">
-                <div className="absolute inset-0 bg-gradient-to-r from-primary/20 to-purple-600/20 mix-blend-overlay" />
-                <div className="relative rounded-xl overflow-hidden border border-border">
-                  <img 
-                    src="https://images.unsplash.com/photo-1483058712412-4245e9b90334?auto=format&fit=crop&w=1200&h=800" 
-                    alt="Cloud infrastructure visualization" 
-                    className="w-full"
-                  />
+
+            <div className="grid gap-6">
+              {[
+                {
+                  title: "Simplicity First",
+                  description: "We believe complex cloud infrastructure shouldn't require complex tools. Everything we build aims to simplify the process."
+                },
+                {
+                  title: "Best Practices by Default",
+                  description: "Our AI is designed to incorporate security, reliability, and cost optimization best practices automatically."
+                },
+                {
+                  title: "Continuous Learning",
+                  description: "Our AI models improve with each architecture created, learning from the collective wisdom of our users."
+                },
+                {
+                  title: "User-Centric Design",
+                  description: "Every feature we build starts with understanding the real needs of cloud builders."
+                }
+              ].map((value, index) => (
+                <div
+                  key={index}
+                  className="group relative p-8 rounded-2xl border border-border/50 bg-gradient-to-br from-card/80 to-card/40 backdrop-blur-sm shadow-lg hover:shadow-xl transition-all duration-300"
+                >
+                  <div className="absolute inset-0 bg-gradient-to-r from-primary/5 to-purple-600/5 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+                  <div className="relative">
+                    <div className="flex items-center gap-4 mb-4">
+                      <div className="flex h-10 w-10 items-center justify-center rounded-full bg-primary/10">
+                        <CheckCircle className="h-5 w-5 text-primary" />
+                      </div>
+                      <h3 className="text-xl font-semibold">{value.title}</h3>
+                    </div>
+                    <p className="text-muted-foreground leading-relaxed">
+                      {value.description}
+                    </p>
+                  </div>
                 </div>
-              </div>
+              ))}
             </div>
           </div>
         </div>
