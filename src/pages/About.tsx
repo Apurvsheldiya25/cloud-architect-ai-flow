@@ -1,3 +1,4 @@
+
 import React from 'react';
 import Layout from '@/components/layout/Layout';
 import { CheckCircle } from 'lucide-react';
@@ -57,7 +58,7 @@ const About = () => {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
             <div className="order-2 md:order-1">
               <h2 className="text-3xl font-bold font-outfit tracking-tight mb-8">Our Values</h2>
-              <div className="space-y-6">
+              <ul className="space-y-6">
                 <li className="flex items-start">
                   <CheckCircle className="h-6 w-6 text-primary shrink-0 mr-3 mt-1" />
                   <div>
