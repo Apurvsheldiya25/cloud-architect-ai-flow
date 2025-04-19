@@ -1,4 +1,3 @@
-
 import React from 'react';
 import Layout from '@/components/layout/Layout';
 import SectionHeading from '@/components/common/SectionHeading';
@@ -61,50 +60,57 @@ const Features = () => {
           </div>
 
           {/* Features Grid */}
-          <div className="mt-32">
-            <div className="text-center mb-16">
-              <SectionHeading 
-                title="Powerful Features"
-                subtitle="Everything you need for your cloud architecture workflow, designed with best practices and real-world use cases in mind."
-                centered={true}
-              />
-            </div>
-            
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-              <FeatureCard 
-                icon={MessageSquareCode}
-                title="Guide AI Assistant"
-                description="Get real-time recommendations and security advice as you design your architecture."
-              />
-              <FeatureCard 
-                icon={FileCode}
-                title="IaC Export"
-                description="Export your visual diagrams directly to infrastructure as code in multiple formats."
-              />
-              <FeatureCard 
-                icon={Users}
-                title="Real-time Sharing"
-                description="Collaborate with your team in real-time with public and private sharing options."
-              />
-              <FeatureCard 
-                icon={CloudCog}
-                title="Multi-Cloud Support"
-                description="Design for AWS, Azure, GCP, and more with native components and accurate service relationships."
-              />
-              <FeatureCard 
-                icon={MousePointer}
-                title="Intuitive Interface"
-                description="Drag-and-drop interface designed for both technical and non-technical users."
-              />
-              <FeatureCard 
-                icon={BrainCircuit}
-                title="Smart Templates"
-                description="Start with industry-standard architecture patterns and customize to your needs."
-              />
-            </div>
+          <section className="relative py-24 overflow-hidden">
+        <div className="absolute inset-0 bg-gradient-to-b from-background via-primary/5 to-background opacity-50" />
+        <div className="absolute inset-0 bg-[url('/grid.svg')] bg-center [mask-image:radial-gradient(white,transparent_85%)]" />
+        
+        <div className="container-custom relative">
+          <div className="max-w-3xl mx-auto mb-20">
+            <SectionHeading 
+              title="Powerful Features"
+              subtitle="Everything you need for your cloud architecture workflow, designed with best practices and real-world use cases in mind."
+              centered={true}
+              className="text-center"
+            />
           </div>
+          
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {/* Feature Cards */}
+            <FeatureCard 
+              icon={MessageSquareCode}
+              title="Guide AI Assistant"
+              description="Get real-time recommendations and security advice as you design your architecture."
+            />
+            <FeatureCard 
+              icon={FileCode}
+              title="IaC Export"
+              description="Export your visual diagrams directly to infrastructure as code in multiple formats."
+            />
+            <FeatureCard 
+              icon={Users}
+              title="Real-time Sharing"
+              description="Collaborate with your team in real-time with public and private sharing options."
+            />
+            <FeatureCard 
+              icon={CloudCog}
+              title="Multi-Cloud Support"
+              description="Design for AWS, Azure, GCP, and more with native components and accurate service relationships."
+            />
+            <FeatureCard 
+              icon={MousePointer}
+              title="Intuitive Interface"
+              description="Drag-and-drop interface designed for both technical and non-technical users."
+            />
+            <FeatureCard 
+              icon={BrainCircuit}
+              title="Smart Templates"
+              description="Start with industry-standard architecture patterns and customize to your needs."
+            />
+          </div>
+        </div>
+      </section>
 
-          {/* Comparison Section */}
+      {/* Comparison Section */}
           <div className="mt-32">
             <SectionHeading 
               title="How Arch AI Compares"
