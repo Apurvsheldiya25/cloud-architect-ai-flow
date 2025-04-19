@@ -1,4 +1,3 @@
-
 import React, { useEffect } from 'react';
 import Layout from '@/components/layout/Layout';
 import { Button } from '@/components/ui/button';
@@ -6,7 +5,7 @@ import SectionHeading from '@/components/common/SectionHeading';
 import FeatureCard from '@/components/common/FeatureCard';
 import TestimonialCard from '@/components/common/TestimonialCard';
 import CTASection from '@/components/common/CTASection';
-import StyledBox from '@/components/common/StyledBox'; // Added the import here
+import StyledBox from '@/components/common/StyledBox';
 import { Link } from 'react-router-dom';
 import { 
   MousePointer, 
@@ -46,7 +45,7 @@ const Index = () => {
   return (
     <Layout>
       {/* Hero Section */}
-      <section className="relative min-h-screen pt-28 flex items-center">
+      <section className="relative min-h-screen pt-28">
         <div className="absolute inset-0 bg-gradient-radial from-primary/5 to-transparent -z-10" />
         <div className="absolute inset-0 bg-[url('/grid.svg')] bg-center [mask-image:radial-gradient(white,transparent_85%)] -z-10" />
         
@@ -59,41 +58,29 @@ const Index = () => {
             
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold font-outfit tracking-tight mb-6 animate-fade-up animation-delay-100">
               Design Cloud Architectures<br />
-              <span className="gradient-text">with AI in Seconds</span>
+              <span className="gradient-text">with AI in Seconds.</span>
             </h1>
             
             <p className="text-xl text-muted-foreground mb-8 animate-fade-up animation-delay-200">
               Generate, edit, and deploy cloud infrastructure with zero complexity.
-              Arch AI is your AI-powered cloud architect.
             </p>
             
-            <div className="flex flex-col sm:flex-row gap-4 justify-center animate-fade-up animation-delay-300">
-              <Link to="/signup">
-                <Button size="lg" className="btn-primary group relative overflow-hidden">
-                  <span className="relative z-10">Start Building for Free</span>
-                  <span className="absolute inset-0 bg-white/20 transform translate-y-full group-hover:translate-y-0 transition-transform duration-300"></span>
-                </Button>
-              </Link>
-              <Link to="/features">
-                <Button variant="outline" size="lg" className="group">
-                  Explore Features
-                  <ExternalLink className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
-                </Button>
-              </Link>
+            <div className="flex items-center gap-3 bg-white/5 backdrop-blur-sm rounded-full p-1.5 max-w-xl mx-auto mb-8 animate-fade-up animation-delay-300">
+              <input 
+                type="email"
+                placeholder="Enter your email"
+                className="flex-1 bg-transparent border-none px-4 py-2 text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-0"
+              />
+              <button className="px-6 py-2.5 bg-primary hover:bg-primary/90 text-white rounded-full transition-colors duration-200 flex items-center gap-2">
+                <span>Get started</span>
+                <Sparkles className="h-4 w-4" />
+              </button>
             </div>
           </div>
 
-          <div className="mt-16 max-w-5xl mx-auto animate-fade-up animation-delay-400">
-            <div className="relative group">
-              <StyledBox>
-                <div className="flex items-center justify-center h-full">
-                  <img 
-                    src="/lovable-uploads/5cfaafc5-d6a3-4174-aefe-2444540383e1.png"
-                    alt="Arch AI Interface"
-                    className="w-full h-full object-cover rounded-lg transition-transform duration-300 group-hover:scale-105"
-                  />
-                </div>
-              </StyledBox>
+          <div className="mt-16 max-w-5xl mx-auto animate-fade-up animation-delay-400 rounded-2xl overflow-hidden">
+            <div className="aspect-video bg-gradient-to-b from-background/80 to-background p-4 rounded-2xl flex items-center justify-center">
+              <BrainCircuit className="h-16 w-16 text-primary/50" />
             </div>
           </div>
         </div>
