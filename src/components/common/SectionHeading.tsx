@@ -16,7 +16,7 @@ const SectionHeading: React.FC<SectionHeadingProps> = ({
 }) => {
   return (
     <div className={`space-y-6 ${centered ? 'text-center' : ''} ${className}`}>
-      <h2 className="relative text-4xl md:text-5xl font-bold font-outfit tracking-tight bg-clip-text text-transparent bg-gradient-to-r from-primary/90 to-primary">
+      <h2 className="relative text-4xl md:text-5xl lg:text-6xl font-bold font-outfit tracking-tight bg-clip-text text-transparent bg-gradient-to-r from-primary/90 to-primary">
         {title}
         {centered && (
           <div className="absolute left-1/2 -translate-x-1/2 -bottom-4 w-24 h-1 bg-gradient-to-r from-primary/60 to-primary rounded-full" />

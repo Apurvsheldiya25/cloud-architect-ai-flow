@@ -48,9 +48,9 @@ const Index = () => {
   return (
     <Layout>
       {/* Hero Section */}
-      <section className="relative min-h-screen pt-28">
+      <section className="relative min-h-screen pt-28 overflow-hidden">
+        <div className="absolute inset-0 bg-[url('/grid.svg')] bg-center [mask-image:radial-gradient(white,transparent_85%)] opacity-10" />
         <div className="absolute inset-0 bg-gradient-radial from-primary/5 to-transparent -z-10" />
-        <div className="absolute inset-0 bg-[url('/grid.svg')] bg-center [mask-image:radial-gradient(white,transparent_85%)] -z-10" />
         
         <div className="container-custom relative z-10">
           <div className="max-w-3xl mx-auto text-center">
@@ -59,34 +59,37 @@ const Index = () => {
               <span className="text-sm font-medium">AI-Powered Cloud Architecture</span>
             </div>
             
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold font-outfit tracking-tight mb-6 animate-fade-up animation-delay-100">
-              Design Cloud Architectures<br />
-              <span className="gradient-text">with AI in Seconds.</span>
+            <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold font-outfit tracking-tight mb-6 animate-fade-up animation-delay-100">
+              Design Cloud Architectures
+              <span className="bg-gradient-to-r from-primary to-purple-600 bg-clip-text text-transparent block mt-2">in Seconds with AI.</span>
             </h1>
             
-            <p className="text-xl text-muted-foreground mb-8 animate-fade-up animation-delay-200">
+            <p className="text-xl text-muted-foreground mb-8 animate-fade-up animation-delay-200 leading-relaxed">
               Generate, edit, and deploy cloud infrastructure with zero complexity.
             </p>
             
-            <div className="flex items-center bg-[#E5DEFF] dark:bg-primary/5 rounded-full p-2 max-w-xl mx-auto mb-8 animate-fade-up animation-delay-300">
-              <input 
-                type="email"
-                placeholder="Enter your email"
-                className="flex-1 bg-transparent border-none px-6 py-3 text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-0 rounded-l-full"
-              />
-              <button className="px-8 py-3 bg-[#7C5DF2] hover:bg-[#6B4BE1] text-white rounded-full transition-all duration-200 flex items-center gap-2 font-medium shadow-lg shadow-primary/25 hover:translate-y-[-1px]">
-                <span>Get started</span>
-                <Sparkles className="h-4 w-4" />
-              </button>
+            <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-12 animate-fade-up animation-delay-300">
+              <Link to="/signup">
+                <Button size="lg" className="bg-primary text-white hover:bg-primary/90 font-medium px-8 py-6 text-lg shadow-lg shadow-primary/25 hover:translate-y-[-2px] transition-all duration-300">
+                  Start Building for Free
+                  <ExternalLink className="ml-2 h-5 w-5" />
+                </Button>
+              </Link>
+              <Link to="/features">
+                <Button variant="outline" size="lg" className="px-8 py-6 text-lg hover:bg-secondary/80">
+                  Explore Features
+                </Button>
+              </Link>
             </div>
-          </div>
 
-          <div className="mt-16 max-w-5xl mx-auto animate-fade-up animation-delay-400">
-            <StyledBox>
-              <div className="aspect-video bg-gradient-to-b from-background/50 to-background flex items-center justify-center rounded-[24px]">
-                <BrainCircuit className="h-16 w-16 text-primary/50" />
-              </div>
-            </StyledBox>
+            <div className="relative max-w-5xl mx-auto animate-fade-up animation-delay-400">
+              <StyledBox>
+                <div className="aspect-video bg-gradient-to-b from-background/50 to-background flex items-center justify-center rounded-[24px] overflow-hidden group relative">
+                  <BrainCircuit className="h-16 w-16 text-primary/50 group-hover:scale-110 transition-transform duration-300" />
+                  <div className="absolute inset-0 bg-gradient-to-r from-primary/10 to-purple-500/10 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+                </div>
+              </StyledBox>
+            </div>
           </div>
         </div>
       </section>
@@ -94,62 +97,8 @@ const Index = () => {
       {/* Cloud Technologies Section */}
       <CloudTechnologies />
 
-      {/* How It Works */}
-      <section className="section-padding animate-on-scroll">
-        <div className="container-custom">
-          <SectionHeading 
-            title="How It Works"
-            subtitle="Creating cloud architectures has never been easier. Just three simple steps."
-            centered={true}
-          />
-          
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mt-16">
-            <div className="relative bg-[#F8F6FF] dark:bg-purple-900/10 p-8 rounded-2xl transition-all duration-300 hover:shadow-lg group">
-              <div className="absolute w-12 h-12 bg-[#E5DEFF] dark:bg-purple-500/20 rounded-full flex items-center justify-center -top-6 left-8">
-                <span className="text-[#7C5DF2] font-semibold text-lg">1</span>
-              </div>
-              <div className="mt-4">
-                <h3 className="text-xl font-semibold mb-3 font-outfit">Describe your needs with a prompt</h3>
-                <p className="text-muted-foreground text-sm leading-relaxed">Tell Arch AI what you need in plain language, just like you'd explain it to a colleague.</p>
-              </div>
-            </div>
-            
-            <div className="relative bg-[#F8F6FF] dark:bg-purple-900/10 p-8 rounded-2xl transition-all duration-300 hover:shadow-lg group">
-              <div className="absolute w-12 h-12 bg-[#E5DEFF] dark:bg-purple-500/20 rounded-full flex items-center justify-center -top-6 left-8">
-                <span className="text-[#7C5DF2] font-semibold text-lg">2</span>
-              </div>
-              <div className="mt-4">
-                <h3 className="text-xl font-semibold mb-3 font-outfit">Arch AI instantly generates a cloud architecture</h3>
-                <p className="text-muted-foreground text-sm leading-relaxed">Watch as Arch AI creates a complete infrastructure diagram based on best practices.</p>
-              </div>
-            </div>
-            
-            <div className="relative bg-[#F8F6FF] dark:bg-purple-900/10 p-8 rounded-2xl transition-all duration-300 hover:shadow-lg group">
-              <div className="absolute w-12 h-12 bg-[#E5DEFF] dark:bg-purple-500/20 rounded-full flex items-center justify-center -top-6 left-8">
-                <span className="text-[#7C5DF2] font-semibold text-lg">3</span>
-              </div>
-              <div className="mt-4">
-                <h3 className="text-xl font-semibold mb-3 font-outfit">You edit and export to code or deploy</h3>
-                <p className="text-muted-foreground text-sm leading-relaxed">Fine-tune your diagram and export directly to Terraform, CloudFormation, or other formats.</p>
-              </div>
-            </div>
-          </div>
-          
-          <div className="mt-16 max-w-5xl mx-auto animate-on-scroll">
-            <div className="relative group rounded-xl overflow-hidden">
-              <div className="absolute -inset-0.5 bg-gradient-to-r from-blue-500 to-primary rounded-xl opacity-75 blur-lg group-hover:opacity-100 transition-all duration-300"></div>
-              <div className="relative rounded-xl overflow-hidden border border-white/10">
-                <div className="aspect-video bg-card/60 backdrop-blur-sm flex items-center justify-center">
-                  <BrainCircuit className="h-16 w-16 text-primary/50" />
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Core Features */}
-      <section className="section-padding bg-secondary animate-on-scroll">
+      {/* Features Grid */}
+      <section className="section-padding animate-on-scroll bg-secondary/30">
         <div className="container-custom">
           <SectionHeading 
             title="Core Features"
@@ -193,8 +142,11 @@ const Index = () => {
       </section>
 
       {/* Benefits Section */}
-      <section className="section-padding animate-on-scroll">
-        <div className="container-custom">
+      <section className="section-padding animate-on-scroll relative overflow-hidden">
+        <div className="absolute inset-0 bg-gradient-to-b from-background via-primary/5 to-background opacity-60" />
+        <div className="absolute inset-0 bg-[url('/grid.svg')] bg-center [mask-image:radial-gradient(white,transparent_85%)] opacity-10" />
+        
+        <div className="container-custom relative">
           <SectionHeading 
             title="Benefits"
             subtitle="Arch AI doesn't just make pretty diagrams - it transforms how you build cloud infrastructure."
@@ -230,7 +182,7 @@ const Index = () => {
       </section>
 
       {/* Testimonials */}
-      <section className="section-padding bg-secondary animate-on-scroll">
+      <section className="section-padding bg-secondary/30 animate-on-scroll">
         <div className="container-custom">
           <SectionHeading 
             title="What People Are Saying"
