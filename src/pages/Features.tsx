@@ -3,7 +3,7 @@ import Layout from '@/components/layout/Layout';
 import SectionHeading from '@/components/common/SectionHeading';
 import FeatureCard from '@/components/common/FeatureCard';
 import CTASection from '@/components/common/CTASection';
-import { BrainCircuit, MousePointerSquare, FileCode, MessageSquareCode, CloudCog, Users, Check, X } from 'lucide-react';
+import { BrainCircuit, MousePointer, FileCode, MessageSquareCode, CloudCog, Users, Check, X } from 'lucide-react';
 
 const Features = () => {
   return (
@@ -103,7 +103,7 @@ const Features = () => {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center mb-24">
             <div className="order-2 md:order-1">
               <div className="inline-block bg-primary/10 p-3 rounded-lg mb-6">
-                <MousePointerSquare className="h-8 w-8 text-primary" />
+                <MousePointer className="h-8 w-8 text-primary" />
               </div>
               <h2 className="heading-md mb-4">Drag & Drop Canvas</h2>
               <p className="text-muted-foreground text-lg mb-6">
