@@ -1,4 +1,3 @@
-
 import React from 'react';
 import Layout from '@/components/layout/Layout';
 import SectionHeading from '@/components/common/SectionHeading';
@@ -105,17 +104,26 @@ const Features = () => {
           </div>
 
           {/* Comparison Section */}
-          <div className="mt-32">
-            <SectionHeading 
-              title="How Arch AI Compares"
-              subtitle="See how our platform stacks up against traditional solutions"
-              centered={true}
-            />
+          <section className="relative py-24 overflow-hidden">
+            <div className="absolute inset-0 bg-gradient-to-b from-background via-primary/5 to-background opacity-60" />
+            <div className="absolute inset-0 bg-[url('/grid.svg')] bg-center [mask-image:radial-gradient(white,transparent_85%)] opacity-10" />
             
-            <div className="mt-12">
-              <ComparisonTable />
+            <div className="container-custom relative">
+              <div className="max-w-5xl mx-auto">
+                <SectionHeading 
+                  title="How Arch AI Compares"
+                  subtitle="See how our platform stacks up against traditional solutions"
+                  centered={true}
+                />
+                
+                <div className="mt-16">
+                  <div className="overflow-hidden rounded-2xl border border-border/50 bg-card/50 backdrop-blur-sm">
+                    <ComparisonTable />
+                  </div>
+                </div>
+              </div>
             </div>
-          </div>
+          </section>
         </div>
       </section>
 
