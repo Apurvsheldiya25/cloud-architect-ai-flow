@@ -1,4 +1,3 @@
-
 import React from 'react';
 import Layout from '@/components/layout/Layout';
 import { CheckCircle } from 'lucide-react';
@@ -113,29 +112,34 @@ const About = () => {
         </div>
       </section>
 
-      {/* Roadmap Section with glass effect */}
-      <section className="py-16 relative overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-b from-secondary/50 to-background/50" />
+      {/* Roadmap Section with modern glass effect */}
+      <section className="py-24 relative overflow-hidden">
+        <div className="absolute inset-0 bg-gradient-to-br from-primary/5 via-secondary/10 to-background" />
+        <div className="absolute inset-0 bg-[url('/grid.svg')] bg-center [mask-image:radial-gradient(white,transparent_85%)]" />
+        
         <div className="container-custom relative">
-          <h2 className="text-3xl font-bold font-outfit tracking-tight text-center mb-16">Our Journey Ahead</h2>
+          <div className="max-w-3xl mx-auto text-center mb-16">
+            <h2 className="text-4xl font-bold font-outfit tracking-tight mb-4">Our Journey Ahead</h2>
+            <p className="text-lg text-muted-foreground">Building the future of cloud architecture, one milestone at a time</p>
+          </div>
           
           <div className="max-w-4xl mx-auto">
-            <div className="bg-card/50 backdrop-blur-sm border border-border/50 rounded-xl p-8">
+            <div className="bg-card/30 backdrop-blur-xl border border-border/50 rounded-2xl p-8 shadow-lg">
               <div className="space-y-12">
-                <div className="relative flex items-start pl-8 md:pl-0">
-                  <div className="hidden md:block w-20 text-right mr-8">
-                    <span className="text-primary font-semibold">Q2 2025</span>
+                <div className="relative flex items-start">
+                  <div className="hidden lg:flex w-32 mt-1">
+                    <span className="text-primary font-semibold px-4 py-1 bg-primary/10 rounded-full text-sm">Q2 2025</span>
                   </div>
-                  <div className="absolute top-0 left-0 md:static md:mr-4">
-                    <div className="h-8 w-8 rounded-full bg-primary flex items-center justify-center text-primary-foreground">
-                      <span className="md:hidden">1</span>
+                  <div className="flex-shrink-0 mr-6 relative">
+                    <div className="h-12 w-12 rounded-full bg-gradient-to-br from-primary to-primary/80 flex items-center justify-center text-white shadow-lg shadow-primary/20">
+                      <span className="font-semibold">01</span>
                     </div>
-                    <div className="absolute top-8 bottom-0 left-4 w-px bg-border md:hidden"></div>
+                    <div className="absolute h-full w-0.5 bg-gradient-to-b from-primary/50 to-transparent top-12 left-6 -ml-px"></div>
                   </div>
-                  <div>
-                    <div className="md:hidden text-primary font-semibold mb-2">Q2 2025</div>
-                    <h3 className="font-semibold text-xl mb-3">Multi-cloud optimization</h3>
-                    <p className="text-muted-foreground text-lg">
+                  <div className="flex-grow pb-8">
+                    <div className="lg:hidden text-primary font-semibold px-3 py-1 bg-primary/10 rounded-full text-sm inline-block mb-2">Q2 2025</div>
+                    <h3 className="text-2xl font-semibold mb-3">Multi-cloud optimization</h3>
+                    <p className="text-muted-foreground text-lg leading-relaxed">
                       We're building advanced AI models to optimize architectures across different cloud providers, 
                       helping you choose the best provider for each component of your infrastructure and enabling 
                       true multi-cloud deployments.
@@ -143,39 +147,39 @@ const About = () => {
                   </div>
                 </div>
                 
-                <div className="relative flex items-start pl-8 md:pl-0">
-                  <div className="hidden md:block w-20 text-right mr-8">
-                    <span className="text-primary font-semibold">Q3 2025</span>
+                <div className="relative flex items-start">
+                  <div className="hidden lg:flex w-32 mt-1">
+                    <span className="text-primary font-semibold px-4 py-1 bg-primary/10 rounded-full text-sm">Q3 2025</span>
                   </div>
-                  <div className="absolute top-0 left-0 md:static md:mr-4">
-                    <div className="h-8 w-8 rounded-full bg-primary flex items-center justify-center text-primary-foreground">
-                      <span className="md:hidden">2</span>
+                  <div className="flex-shrink-0 mr-6 relative">
+                    <div className="h-12 w-12 rounded-full bg-gradient-to-br from-primary to-primary/80 flex items-center justify-center text-white shadow-lg shadow-primary/20">
+                      <span className="font-semibold">02</span>
                     </div>
-                    <div className="absolute top-8 bottom-0 left-4 w-px bg-border md:hidden"></div>
+                    <div className="absolute h-full w-0.5 bg-gradient-to-b from-primary/50 to-transparent top-12 left-6 -ml-px"></div>
                   </div>
-                  <div>
-                    <div className="md:hidden text-primary font-semibold mb-2">Q3 2025</div>
-                    <h3 className="font-semibold text-xl mb-3">Real-time deployment</h3>
-                    <p className="text-muted-foreground text-lg">
+                  <div className="flex-grow pb-8">
+                    <div className="lg:hidden text-primary font-semibold px-3 py-1 bg-primary/10 rounded-full text-sm inline-block mb-2">Q3 2025</div>
+                    <h3 className="text-2xl font-semibold mb-3">Real-time deployment</h3>
+                    <p className="text-muted-foreground text-lg leading-relaxed">
                       Soon you'll be able to deploy your architecture directly from Arch AI to your cloud provider 
                       of choice. Design, test, and deploy without ever leaving the platform.
                     </p>
                   </div>
                 </div>
                 
-                <div className="relative flex items-start pl-8 md:pl-0">
-                  <div className="hidden md:block w-20 text-right mr-8">
-                    <span className="text-primary font-semibold">Q4 2025</span>
+                <div className="relative flex items-start">
+                  <div className="hidden lg:flex w-32 mt-1">
+                    <span className="text-primary font-semibold px-4 py-1 bg-primary/10 rounded-full text-sm">Q4 2025</span>
                   </div>
-                  <div className="absolute top-0 left-0 md:static md:mr-4">
-                    <div className="h-8 w-8 rounded-full bg-primary flex items-center justify-center text-primary-foreground">
-                      <span className="md:hidden">3</span>
+                  <div className="flex-shrink-0 mr-6">
+                    <div className="h-12 w-12 rounded-full bg-gradient-to-br from-primary to-primary/80 flex items-center justify-center text-white shadow-lg shadow-primary/20">
+                      <span className="font-semibold">03</span>
                     </div>
                   </div>
-                  <div>
-                    <div className="md:hidden text-primary font-semibold mb-2">Q4 2025</div>
-                    <h3 className="font-semibold text-xl mb-3">AI agent infrastructure consultant</h3>
-                    <p className="text-muted-foreground text-lg">
+                  <div className="flex-grow">
+                    <div className="lg:hidden text-primary font-semibold px-3 py-1 bg-primary/10 rounded-full text-sm inline-block mb-2">Q4 2025</div>
+                    <h3 className="text-2xl font-semibold mb-3">AI agent infrastructure consultant</h3>
+                    <p className="text-muted-foreground text-lg leading-relaxed">
                       Our AI will evolve beyond diagram generation to become a full infrastructure consultant, 
                       monitoring your deployments, suggesting optimizations, and helping you troubleshoot issues 
                       in real-time.
