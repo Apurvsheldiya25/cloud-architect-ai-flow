@@ -78,10 +78,12 @@ const Index = () => {
             </div>
           </div>
 
-          <div className="mt-16 max-w-5xl mx-auto animate-fade-up animation-delay-400 rounded-2xl overflow-hidden">
-            <div className="aspect-video bg-gradient-to-b from-background/80 to-background p-4 rounded-2xl flex items-center justify-center">
-              <BrainCircuit className="h-16 w-16 text-primary/50" />
-            </div>
+          <div className="mt-16 max-w-5xl mx-auto animate-fade-up animation-delay-400">
+            <StyledBox>
+              <div className="aspect-video bg-gradient-to-b from-background/95 to-background p-8 rounded-[calc(2rem-4px)] flex items-center justify-center">
+                <BrainCircuit className="h-16 w-16 text-primary/50" />
+              </div>
+            </StyledBox>
           </div>
         </div>
       </section>
