@@ -1,4 +1,3 @@
-
 import React, { useEffect } from 'react';
 import Layout from '@/components/layout/Layout';
 import { Button } from '@/components/ui/button';
@@ -22,7 +21,6 @@ import {
 } from 'lucide-react';
 
 const Index = () => {
-  // Intersection Observer for scroll animations
   useEffect(() => {
     const observer = new IntersectionObserver((entries) => {
       entries.forEach(entry => {
@@ -85,15 +83,15 @@ const Index = () => {
 
           <div className="mt-16 max-w-5xl mx-auto animate-fade-up animation-delay-400">
             <div className="relative group">
-              <div className="absolute -inset-0.5 bg-gradient-to-r from-primary to-indigo-600 rounded-xl opacity-75 blur-lg group-hover:opacity-100 transition-all duration-500 group-hover:duration-200 animate-pulse-glow"></div>
-              <div className="relative">
-                <img 
-                  src="/lovable-uploads/5cfaafc5-d6a3-4174-aefe-2444540383e1.png"
-                  alt="Arch AI Interface"
-                  className="w-full rounded-xl shadow-[0_8px_40px_-12px_rgba(0,0,0,0.3)] border border-white/20 bg-card/30 backdrop-blur-sm transition-all duration-300 group-hover:shadow-[0_8px_60px_-8px_rgba(79,70,229,0.5)]"
-                />
-                <div className="absolute inset-0 rounded-xl ring-1 ring-inset ring-white/10 transition-opacity group-hover:opacity-0"></div>
-              </div>
+              <StyledBox>
+                <div className="flex items-center justify-center h-full">
+                  <img 
+                    src="/lovable-uploads/5cfaafc5-d6a3-4174-aefe-2444540383e1.png"
+                    alt="Arch AI Interface"
+                    className="w-full h-full object-cover rounded-lg transition-transform duration-300 group-hover:scale-105"
+                  />
+                </div>
+              </StyledBox>
             </div>
           </div>
         </div>
