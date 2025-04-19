@@ -21,6 +21,7 @@ const Features = () => {
         </div>
         
         <div className="container-custom">
+          {/* AI Architecture Section */}
           <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center mb-24">
             <div className="space-y-8 animate-fade-up">
               <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary/10 text-primary">
@@ -63,13 +64,7 @@ const Features = () => {
           </div>
 
           {/* Additional Features Grid */}
-          <section className="relative py-24 overflow-hidden">
-            {/* Add decorative background elements */}
-            <div className="absolute inset-0 bg-gradient-to-b from-secondary/50 via-background to-background" />
-            <div className="absolute inset-x-0 -top-40 -z-10 transform-gpu overflow-hidden blur-3xl sm:-top-80">
-              <div className="relative left-[calc(50%-11rem)] aspect-[1155/678] w-[36.125rem] -translate-x-1/2 rotate-[30deg] bg-gradient-to-tr from-primary to-purple-500 opacity-20 sm:left-[calc(50%-30rem)] sm:w-[72.1875rem]" />
-            </div>
-            
+          <section className="py-24">
             <div className="container-custom relative">
               <div className="mx-auto max-w-2xl text-center mb-16">
                 <SectionHeading 
@@ -81,6 +76,7 @@ const Features = () => {
               </div>
               
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mt-12">
+                {/* Feature Cards */}
                 <FeatureCard 
                   icon={MessageSquareCode}
                   title="Guide AI Assistant"
@@ -130,7 +126,7 @@ const Features = () => {
             </div>
           </section>
 
-          {/* CTA */}
+          {/* CTA Section */}
           <CTASection 
             title="Experience Arch AI in action"
             subtitle="Get started with a free account and see how Arch AI can transform your cloud architecture workflow."
@@ -139,29 +135,6 @@ const Features = () => {
           />
         </div>
       </section>
-
-      {/* Comparison Section */}
-      <section className="py-20">
-        <div className="container-custom">
-          <SectionHeading 
-            title="How Arch AI Compares"
-            subtitle="See how our platform stacks up against traditional solutions"
-            centered={true}
-          />
-          
-          <div className="mt-12">
-            <ComparisonTable />
-          </div>
-        </div>
-      </section>
-
-      {/* CTA */}
-      <CTASection 
-        title="Experience Arch AI in action"
-        subtitle="Get started with a free account and see how Arch AI can transform your cloud architecture workflow."
-        buttonText="Start Building for Free"
-        buttonLink="/signup"
-      />
     </Layout>
   );
 };
