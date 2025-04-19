@@ -135,10 +135,11 @@ const About = () => {
       </section>
 
       {/* Roadmap Section with modern design */}
-      <section className="py-24 relative overflow-hidden bg-gradient-to-b from-background to-secondary/20">
+      <section className="py-32 relative overflow-hidden">
+        <div className="absolute inset-0 bg-gradient-to-b from-background via-background/95 to-background/90" />
         <div className="container-custom relative">
-          <div className="max-w-3xl mx-auto text-center mb-16">
-            <h2 className="text-4xl font-bold font-outfit tracking-tight mb-4 bg-gradient-to-r from-primary to-purple-600 bg-clip-text text-transparent">
+          <div className="max-w-3xl mx-auto text-center mb-24">
+            <h2 className="text-4xl font-bold font-outfit tracking-tight mb-6 bg-gradient-to-r from-primary to-purple-600 bg-clip-text text-transparent">
               Our Journey Ahead
             </h2>
             <p className="text-lg text-muted-foreground">
