@@ -95,8 +95,11 @@ const Index = () => {
       <CloudTechnologies />
 
       {/* How It Works */}
-      <section className="section-padding animate-on-scroll">
-        <div className="container-custom">
+      <section className="section-padding animate-on-scroll relative overflow-hidden">
+        <div className="absolute inset-0 bg-gradient-to-b from-background to-background/50" />
+        <div className="absolute inset-0 bg-[url('/grid.svg')] bg-center [mask-image:radial-gradient(white,transparent_85%)] opacity-10" />
+        
+        <div className="container-custom relative z-10">
           <SectionHeading 
             title="How It Works"
             subtitle="Creating cloud architectures has never been easier. Just three simple steps."
@@ -104,35 +107,23 @@ const Index = () => {
           />
           
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mt-16">
-            <div className="relative bg-[#F8F6FF] dark:bg-purple-900/10 p-8 rounded-2xl transition-all duration-300 hover:shadow-lg group">
-              <div className="absolute w-12 h-12 bg-[#E5DEFF] dark:bg-purple-500/20 rounded-full flex items-center justify-center -top-6 left-8">
-                <span className="text-[#7C5DF2] font-semibold text-lg">1</span>
-              </div>
-              <div className="mt-4">
-                <h3 className="text-xl font-semibold mb-3 font-outfit">Describe your needs with a prompt</h3>
-                <p className="text-muted-foreground text-sm leading-relaxed">Tell Arch AI what you need in plain language, just like you'd explain it to a colleague.</p>
-              </div>
-            </div>
+            <ProcessCard
+              number={1}
+              title="Describe your needs with a prompt"
+              description="Tell Arch AI what you need in plain language, just like you'd explain it to a colleague."
+            />
             
-            <div className="relative bg-[#F8F6FF] dark:bg-purple-900/10 p-8 rounded-2xl transition-all duration-300 hover:shadow-lg group">
-              <div className="absolute w-12 h-12 bg-[#E5DEFF] dark:bg-purple-500/20 rounded-full flex items-center justify-center -top-6 left-8">
-                <span className="text-[#7C5DF2] font-semibold text-lg">2</span>
-              </div>
-              <div className="mt-4">
-                <h3 className="text-xl font-semibold mb-3 font-outfit">Arch AI instantly generates a cloud architecture</h3>
-                <p className="text-muted-foreground text-sm leading-relaxed">Watch as Arch AI creates a complete infrastructure diagram based on best practices.</p>
-              </div>
-            </div>
+            <ProcessCard
+              number={2}
+              title="Arch AI instantly generates a cloud architecture"
+              description="Watch as Arch AI creates a complete infrastructure diagram based on best practices."
+            />
             
-            <div className="relative bg-[#F8F6FF] dark:bg-purple-900/10 p-8 rounded-2xl transition-all duration-300 hover:shadow-lg group">
-              <div className="absolute w-12 h-12 bg-[#E5DEFF] dark:bg-purple-500/20 rounded-full flex items-center justify-center -top-6 left-8">
-                <span className="text-[#7C5DF2] font-semibold text-lg">3</span>
-              </div>
-              <div className="mt-4">
-                <h3 className="text-xl font-semibold mb-3 font-outfit">You edit and export to code or deploy</h3>
-                <p className="text-muted-foreground text-sm leading-relaxed">Fine-tune your diagram and export directly to Terraform, CloudFormation, or other formats.</p>
-              </div>
-            </div>
+            <ProcessCard
+              number={3}
+              title="You edit and export to code or deploy"
+              description="Fine-tune your diagram and export directly to Terraform, CloudFormation, or other formats."
+            />
           </div>
           
           <div className="mt-16 max-w-5xl mx-auto animate-on-scroll">
