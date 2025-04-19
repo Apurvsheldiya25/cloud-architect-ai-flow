@@ -135,14 +135,15 @@ const About = () => {
       </section>
 
       {/* Roadmap Section with modern design */}
-      <section className="py-24 relative overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-br from-primary/5 via-secondary/10 to-background" />
-        <div className="absolute inset-0 bg-[url('/grid.svg')] bg-center [mask-image:radial-gradient(white,transparent_85%)]" />
-        
+      <section className="py-24 relative overflow-hidden bg-gradient-to-b from-background to-secondary/20">
         <div className="container-custom relative">
           <div className="max-w-3xl mx-auto text-center mb-16">
-            <h2 className="text-4xl font-bold font-outfit tracking-tight mb-4">Our Journey Ahead</h2>
-            <p className="text-lg text-muted-foreground">Building the future of cloud architecture, one milestone at a time</p>
+            <h2 className="text-4xl font-bold font-outfit tracking-tight mb-4 bg-gradient-to-r from-primary to-purple-600 bg-clip-text text-transparent">
+              Our Journey Ahead
+            </h2>
+            <p className="text-lg text-muted-foreground">
+              Building the future of cloud architecture, one milestone at a time
+            </p>
           </div>
           
           <RoadmapTimeline items={timelineItems} />
