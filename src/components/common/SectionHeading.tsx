@@ -15,15 +15,16 @@ const SectionHeading: React.FC<SectionHeadingProps> = ({
   className = ''
 }) => {
   return (
-    <div className={`mb-10 ${centered ? 'text-center' : ''} ${className}`}>
-      <h2 className="text-3xl md:text-4xl font-bold font-outfit tracking-tight mb-4">
+    <div className={`space-y-6 ${centered ? 'text-center' : ''} ${className}`}>
+      <h2 className="text-4xl md:text-5xl font-bold font-outfit tracking-tight">
         {title}
       </h2>
       {subtitle && (
-        <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
+        <p className="text-lg md:text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
           {subtitle}
         </p>
       )}
+      <div className={`h-1 w-20 bg-primary rounded-full transition-all duration-300 ${centered ? 'mx-auto' : ''}`} />
     </div>
   );
 };

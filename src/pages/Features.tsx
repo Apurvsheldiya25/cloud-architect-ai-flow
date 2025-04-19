@@ -1,4 +1,3 @@
-
 import React from 'react';
 import Layout from '@/components/layout/Layout';
 import SectionHeading from '@/components/common/SectionHeading';
@@ -56,46 +55,80 @@ const Features = () => {
           </div>
 
           {/* Additional Features Grid */}
-          <div className="pt-12">
-            <SectionHeading 
-              title="Powerful Features"
-              subtitle="Everything you need for your cloud architecture workflow."
-              centered={true}
-            />
-            
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mt-12">
-              <FeatureCard 
-                icon={MessageSquareCode}
-                title="Guide AI Assistant"
-                description="Get real-time recommendations and security advice as you design your architecture."
-              />
-              <FeatureCard 
-                icon={FileCode}
-                title="IaC Export"
-                description="Export your visual diagrams directly to infrastructure as code in multiple formats."
-              />
-              <FeatureCard 
-                icon={Users}
-                title="Real-time Sharing"
-                description="Collaborate with your team in real-time with public and private sharing options."
-              />
-              <FeatureCard 
-                icon={CloudCog}
-                title="Multi-Cloud Support"
-                description="Design for AWS, Azure, GCP, and more with native components and accurate service relationships."
-              />
-              <FeatureCard 
-                icon={MousePointer}
-                title="Intuitive Interface"
-                description="Drag-and-drop interface designed for both technical and non-technical users."
-              />
-              <FeatureCard 
-                icon={BrainCircuit}
-                title="Smart Templates"
-                description="Start with industry-standard architecture patterns and customize to your needs."
-              />
+          <section className="relative py-24 overflow-hidden">
+            {/* Add decorative background elements */}
+            <div className="absolute inset-0 bg-gradient-to-b from-secondary/50 via-background to-background" />
+            <div className="absolute inset-x-0 -top-40 -z-10 transform-gpu overflow-hidden blur-3xl sm:-top-80">
+              <div className="relative left-[calc(50%-11rem)] aspect-[1155/678] w-[36.125rem] -translate-x-1/2 rotate-[30deg] bg-gradient-to-tr from-primary to-purple-500 opacity-20 sm:left-[calc(50%-30rem)] sm:w-[72.1875rem]" />
             </div>
-          </div>
+            
+            <div className="container-custom relative">
+              <div className="mx-auto max-w-2xl text-center mb-16">
+                <SectionHeading 
+                  title="Powerful Features"
+                  subtitle="Everything you need for your cloud architecture workflow, designed with best practices and real-world use cases in mind."
+                  centered={true}
+                  className="animate-fade-in"
+                />
+              </div>
+              
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mt-12">
+                <FeatureCard 
+                  icon={MessageSquareCode}
+                  title="Guide AI Assistant"
+                  description="Get real-time recommendations and security advice as you design your architecture."
+                />
+                <FeatureCard 
+                  icon={FileCode}
+                  title="IaC Export"
+                  description="Export your visual diagrams directly to infrastructure as code in multiple formats."
+                />
+                <FeatureCard 
+                  icon={Users}
+                  title="Real-time Sharing"
+                  description="Collaborate with your team in real-time with public and private sharing options."
+                />
+                <FeatureCard 
+                  icon={CloudCog}
+                  title="Multi-Cloud Support"
+                  description="Design for AWS, Azure, GCP, and more with native components and accurate service relationships."
+                />
+                <FeatureCard 
+                  icon={MousePointer}
+                  title="Intuitive Interface"
+                  description="Drag-and-drop interface designed for both technical and non-technical users."
+                />
+                <FeatureCard 
+                  icon={BrainCircuit}
+                  title="Smart Templates"
+                  description="Start with industry-standard architecture patterns and customize to your needs."
+                />
+              </div>
+            </div>
+          </section>
+
+          {/* Comparison Section */}
+          <section className="py-20">
+            <div className="container-custom">
+              <SectionHeading 
+                title="How Arch AI Compares"
+                subtitle="See how our platform stacks up against traditional solutions"
+                centered={true}
+              />
+              
+              <div className="mt-12">
+                <ComparisonTable />
+              </div>
+            </div>
+          </section>
+
+          {/* CTA */}
+          <CTASection 
+            title="Experience Arch AI in action"
+            subtitle="Get started with a free account and see how Arch AI can transform your cloud architecture workflow."
+            buttonText="Start Building for Free"
+            buttonLink="/signup"
+          />
         </div>
       </section>
 
