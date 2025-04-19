@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { Cloud, Database } from 'lucide-react';
 
@@ -38,17 +37,6 @@ const CloudTechnologies = () => {
             </div>
             <h3 className="text-xl font-medium mb-2">Microsoft Azure</h3>
             <p className="text-muted-foreground">Cloud computing solutions</p>
-          </div>
-        </div>
-
-        <div className="max-w-4xl mx-auto px-4">
-          <div className="grid grid-cols-3 md:grid-cols-6 gap-6 items-center opacity-60">
-            <img src="/microsoft.svg" alt="Microsoft" className="h-6 w-auto grayscale hover:grayscale-0 transition-all" />
-            <img src="/google.svg" alt="Google" className="h-6 w-auto grayscale hover:grayscale-0 transition-all" />
-            <img src="/meta.svg" alt="Meta" className="h-6 w-auto grayscale hover:grayscale-0 transition-all" />
-            <img src="/spotify.svg" alt="Spotify" className="h-6 w-auto grayscale hover:grayscale-0 transition-all" />
-            <img src="/dell.svg" alt="Dell" className="h-6 w-auto grayscale hover:grayscale-0 transition-all" />
-            <img src="/nvidia.svg" alt="NVIDIA" className="h-6 w-auto grayscale hover:grayscale-0 transition-all" />
           </div>
         </div>
       </div>
