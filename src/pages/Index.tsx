@@ -129,37 +129,34 @@ const Index = () => {
           />
           
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mt-16">
-            <div className="text-center transform transition-all duration-500 hover:translate-y-[-8px]">
-              <div className="relative mx-auto mb-6">
-                <div className="absolute inset-0 bg-primary/20 rounded-full blur-md"></div>
-                <div className="relative bg-primary/10 h-16 w-16 rounded-full flex items-center justify-center mx-auto border border-primary/30">
-                  <span className="text-primary font-bold text-2xl">1</span>
-                </div>
+            <div className="relative bg-[#F8F6FF] dark:bg-purple-900/10 p-8 rounded-2xl transition-all duration-300 hover:shadow-lg group">
+              <div className="absolute w-12 h-12 bg-[#E5DEFF] dark:bg-purple-500/20 rounded-full flex items-center justify-center -top-6 left-8">
+                <span className="text-[#7C5DF2] font-semibold text-lg">1</span>
               </div>
-              <h3 className="font-semibold text-xl mb-3 font-outfit">Describe your needs with a prompt</h3>
-              <p className="text-muted-foreground">Tell Arch AI what you need in plain language, just like you'd explain it to a colleague.</p>
+              <div className="mt-4">
+                <h3 className="text-xl font-semibold mb-3 font-outfit">Describe your needs with a prompt</h3>
+                <p className="text-muted-foreground text-sm leading-relaxed">Tell Arch AI what you need in plain language, just like you'd explain it to a colleague.</p>
+              </div>
             </div>
             
-            <div className="text-center transform transition-all duration-500 hover:translate-y-[-8px]">
-              <div className="relative mx-auto mb-6">
-                <div className="absolute inset-0 bg-primary/20 rounded-full blur-md"></div>
-                <div className="relative bg-primary/10 h-16 w-16 rounded-full flex items-center justify-center mx-auto border border-primary/30">
-                  <span className="text-primary font-bold text-2xl">2</span>
-                </div>
+            <div className="relative bg-[#F8F6FF] dark:bg-purple-900/10 p-8 rounded-2xl transition-all duration-300 hover:shadow-lg group">
+              <div className="absolute w-12 h-12 bg-[#E5DEFF] dark:bg-purple-500/20 rounded-full flex items-center justify-center -top-6 left-8">
+                <span className="text-[#7C5DF2] font-semibold text-lg">2</span>
               </div>
-              <h3 className="font-semibold text-xl mb-3 font-outfit">Arch AI instantly generates a cloud architecture</h3>
-              <p className="text-muted-foreground">Watch as Arch AI creates a complete infrastructure diagram based on best practices.</p>
+              <div className="mt-4">
+                <h3 className="text-xl font-semibold mb-3 font-outfit">Arch AI instantly generates a cloud architecture</h3>
+                <p className="text-muted-foreground text-sm leading-relaxed">Watch as Arch AI creates a complete infrastructure diagram based on best practices.</p>
+              </div>
             </div>
             
-            <div className="text-center transform transition-all duration-500 hover:translate-y-[-8px]">
-              <div className="relative mx-auto mb-6">
-                <div className="absolute inset-0 bg-primary/20 rounded-full blur-md"></div>
-                <div className="relative bg-primary/10 h-16 w-16 rounded-full flex items-center justify-center mx-auto border border-primary/30">
-                  <span className="text-primary font-bold text-2xl">3</span>
-                </div>
+            <div className="relative bg-[#F8F6FF] dark:bg-purple-900/10 p-8 rounded-2xl transition-all duration-300 hover:shadow-lg group">
+              <div className="absolute w-12 h-12 bg-[#E5DEFF] dark:bg-purple-500/20 rounded-full flex items-center justify-center -top-6 left-8">
+                <span className="text-[#7C5DF2] font-semibold text-lg">3</span>
               </div>
-              <h3 className="font-semibold text-xl mb-3 font-outfit">You edit and export to code or deploy</h3>
-              <p className="text-muted-foreground">Fine-tune your diagram and export directly to Terraform, CloudFormation, or other formats.</p>
+              <div className="mt-4">
+                <h3 className="text-xl font-semibold mb-3 font-outfit">You edit and export to code or deploy</h3>
+                <p className="text-muted-foreground text-sm leading-relaxed">Fine-tune your diagram and export directly to Terraform, CloudFormation, or other formats.</p>
+              </div>
             </div>
           </div>
           
@@ -235,7 +232,7 @@ const Index = () => {
                 <Zap className="h-6 w-6 text-primary" />
               </div>
               <h3 className="font-semibold text-xl mb-4 font-outfit">Plan 10x faster</h3>
-              <p className="text-muted-foreground">Go from initial idea to detailed cloud architecture in minutes instead of days. Accelerate your planning cycle and delivery timelines.</p>
+              <p className="text-muted-foreground text-sm leading-relaxed">Go from initial idea to detailed cloud architecture in minutes instead of days. Accelerate your planning cycle and delivery timelines.</p>
             </div>
             
             <div className="bg-card p-8 rounded-xl border border-border shadow-sm hover:shadow-md transition-all duration-300 hover:translate-y-[-4px]">
@@ -243,7 +240,7 @@ const Index = () => {
                 <ShieldCheck className="h-6 w-6 text-primary" />
               </div>
               <h3 className="font-semibold text-xl mb-4 font-outfit">Reduce architecture errors</h3>
-              <p className="text-muted-foreground">Our AI ensures your architectures follow cloud best practices, security guidelines, and cost optimization principles automatically.</p>
+              <p className="text-muted-foreground text-sm leading-relaxed">Our AI ensures your architectures follow cloud best practices, security guidelines, and cost optimization principles automatically.</p>
             </div>
             
             <div className="bg-card p-8 rounded-xl border border-border shadow-sm hover:shadow-md transition-all duration-300 hover:translate-y-[-4px]">
@@ -251,7 +248,7 @@ const Index = () => {
                 <Users className="h-6 w-6 text-primary" />
               </div>
               <h3 className="font-semibold text-xl mb-4 font-outfit">Collaborate with teams</h3>
-              <p className="text-muted-foreground">Share, edit, and discuss cloud architectures with stakeholders. Bridge the gap between technical and non-technical team members.</p>
+              <p className="text-muted-foreground text-sm leading-relaxed">Share, edit, and discuss cloud architectures with stakeholders. Bridge the gap between technical and non-technical team members.</p>
             </div>
           </div>
         </div>
