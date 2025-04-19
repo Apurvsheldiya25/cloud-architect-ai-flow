@@ -1,4 +1,3 @@
-
 import React, { useEffect } from 'react';
 import Layout from '@/components/layout/Layout';
 import { Button } from '@/components/ui/button';
@@ -21,7 +20,6 @@ import {
   ExternalLink,
   Code2,
   Cloud,
-  Microsoft,
   Database
 } from 'lucide-react';
 
@@ -107,7 +105,7 @@ const Index = () => {
               {/* Azure */}
               <div className="flex flex-col items-center min-w-[200px] p-4">
                 <div className="h-12 text-[#008AD7] dark:text-[#008AD7]/90 mb-2">
-                  <Microsoft className="h-12 w-12" strokeWidth={1} />
+                  <Cloud className="h-12 w-12" strokeWidth={1} />
                 </div>
                 <span className="text-sm font-medium">Microsoft Azure</span>
               </div>
@@ -132,7 +130,7 @@ const Index = () => {
               {/* Azure */}
               <div className="flex flex-col items-center min-w-[200px] p-4">
                 <div className="h-12 text-[#008AD7] dark:text-[#008AD7]/90 mb-2">
-                  <Microsoft className="h-12 w-12" strokeWidth={1} />
+                  <Cloud className="h-12 w-12" strokeWidth={1} />
                 </div>
                 <span className="text-sm font-medium">Microsoft Azure</span>
               </div>
