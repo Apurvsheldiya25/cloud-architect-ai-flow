@@ -1,3 +1,4 @@
+
 import React from 'react';
 import { Cloud, Database } from 'lucide-react';
 
@@ -14,26 +15,26 @@ const CloudTechnologies = () => {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-4xl mx-auto mb-16">
-          <div className="flex flex-col items-center text-center">
-            <div className="w-16 h-16 rounded-full bg-white dark:bg-white/5 shadow-md flex items-center justify-center mb-4">
-              <Cloud className="w-8 h-8 text-[#4285F4]" strokeWidth={1.5} />
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-4xl mx-auto">
+          <div className="group flex flex-col items-center text-center p-6 rounded-xl bg-card hover:bg-secondary/50 transition-colors">
+            <div className="w-14 h-14 rounded-full bg-primary/10 flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
+              <Cloud className="w-7 h-7 text-primary" strokeWidth={1.5} />
             </div>
             <h3 className="text-xl font-medium mb-2">Google Cloud Platform</h3>
             <p className="text-muted-foreground">Enterprise-scale cloud infrastructure</p>
           </div>
 
-          <div className="flex flex-col items-center text-center">
-            <div className="w-16 h-16 rounded-full bg-white dark:bg-white/5 shadow-md flex items-center justify-center mb-4">
-              <Database className="w-8 h-8 text-[#326CE5]" strokeWidth={1.5} />
+          <div className="group flex flex-col items-center text-center p-6 rounded-xl bg-card hover:bg-secondary/50 transition-colors">
+            <div className="w-14 h-14 rounded-full bg-primary/10 flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
+              <Database className="w-7 h-7 text-primary" strokeWidth={1.5} />
             </div>
             <h3 className="text-xl font-medium mb-2">Kubernetes</h3>
             <p className="text-muted-foreground">Container orchestration platform</p>
           </div>
 
-          <div className="flex flex-col items-center text-center">
-            <div className="w-16 h-16 rounded-full bg-white dark:bg-white/5 shadow-md flex items-center justify-center mb-4">
-              <Cloud className="w-8 h-8 text-[#008AD7]" strokeWidth={1.5} />
+          <div className="group flex flex-col items-center text-center p-6 rounded-xl bg-card hover:bg-secondary/50 transition-colors">
+            <div className="w-14 h-14 rounded-full bg-primary/10 flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
+              <Cloud className="w-7 h-7 text-primary" strokeWidth={1.5} />
             </div>
             <h3 className="text-xl font-medium mb-2">Microsoft Azure</h3>
             <p className="text-muted-foreground">Cloud computing solutions</p>
