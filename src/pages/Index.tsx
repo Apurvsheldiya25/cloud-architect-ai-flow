@@ -1,4 +1,3 @@
-
 import React from 'react';
 import Layout from '@/components/layout/Layout';
 import { Button } from '@/components/ui/button';
@@ -7,7 +6,7 @@ import FeatureCard from '@/components/common/FeatureCard';
 import TestimonialCard from '@/components/common/TestimonialCard';
 import CTASection from '@/components/common/CTASection';
 import { Link } from 'react-router-dom';
-import { BrainCircuit, DragDropIcon, FileCode, MessageSquareCode, CloudCog, Zap, ShieldCheck, Users } from 'lucide-react';
+import { BrainCircuit, MousePointerSquare, FileCode, MessageSquareCode, CloudCog, Zap, ShieldCheck, Users } from 'lucide-react';
 
 const Index = () => {
   return (
@@ -143,7 +142,7 @@ const Index = () => {
               description="Turn text prompts into complete cloud architecture diagrams in seconds with our state-of-the-art AI."
             />
             <FeatureCard 
-              icon={DragDropIcon}
+              icon={MousePointerSquare}
               title="Drag-and-Drop Node Editor"
               description="Easily customize your architecture with an intuitive drag-and-drop interface designed for technical and non-technical users."
             />
