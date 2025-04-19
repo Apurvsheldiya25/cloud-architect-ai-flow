@@ -1,3 +1,4 @@
+
 import React, { useEffect } from 'react';
 import Layout from '@/components/layout/Layout';
 import { Button } from '@/components/ui/button';
@@ -5,6 +6,7 @@ import SectionHeading from '@/components/common/SectionHeading';
 import FeatureCard from '@/components/common/FeatureCard';
 import TestimonialCard from '@/components/common/TestimonialCard';
 import CTASection from '@/components/common/CTASection';
+import StyledBox from '@/components/common/StyledBox'; // Added the import here
 import { Link } from 'react-router-dom';
 import { 
   MousePointer, 
