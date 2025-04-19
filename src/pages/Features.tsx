@@ -15,13 +15,14 @@ const Features = () => {
       <HeroFeatures />
 
       {/* Main Features */}
-      <section className="relative py-24 bg-gradient-to-b from-secondary/80 via-background/40 to-background overflow-hidden">
+      <section className="relative py-24 overflow-hidden">
+        <div className="absolute inset-0 bg-gradient-to-b from-secondary/20 to-background/5" />
         <div className="absolute inset-0 bg-[url('/grid.svg')] bg-center [mask-image:radial-gradient(white,transparent_85%)] opacity-10" />
         <div className="absolute inset-x-0 -top-40 -z-10 transform-gpu overflow-hidden blur-3xl">
           <div className="relative left-[calc(50%-11rem)] aspect-[1155/678] w-[36.125rem] -translate-x-1/2 rotate-[30deg] bg-gradient-to-tr from-primary/30 to-purple-500/30 opacity-20 sm:left-[calc(50%-30rem)] sm:w-[72.1875rem]" />
         </div>
         
-        <div className="container-custom">
+        <div className="container-custom relative">
           {/* AI Architecture Section */}
           <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center mb-24">
             <div className="space-y-8 animate-fade-up">
@@ -113,8 +114,9 @@ const Features = () => {
           </section>
 
           {/* Comparison Section */}
-          <section className="py-20">
-            <div className="container-custom">
+          <section className="py-20 bg-gradient-to-b from-background via-secondary/5 to-background relative overflow-hidden">
+            <div className="absolute inset-0 bg-[url('/grid.svg')] bg-center [mask-image:radial-gradient(white,transparent_85%)] opacity-5" />
+            <div className="container-custom relative">
               <SectionHeading 
                 title="How Arch AI Compares"
                 subtitle="See how our platform stacks up against traditional solutions"
