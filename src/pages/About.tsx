@@ -2,8 +2,30 @@ import React from 'react';
 import Layout from '@/components/layout/Layout';
 import { CheckCircle } from 'lucide-react';
 import CTASection from '@/components/common/CTASection';
+import RoadmapTimeline from '@/components/timeline/RoadmapTimeline';
 
 const About = () => {
+  const timelineItems = [
+    {
+      date: "Q2 2025",
+      number: "01",
+      title: "Multi-cloud optimization",
+      description: "We're building advanced AI models to optimize architectures across different cloud providers, helping you choose the best provider for each component of your infrastructure and enabling true multi-cloud deployments."
+    },
+    {
+      date: "Q3 2025",
+      number: "02",
+      title: "Real-time deployment",
+      description: "Soon you'll be able to deploy your architecture directly from Arch AI to your cloud provider of choice. Design, test, and deploy without ever leaving the platform."
+    },
+    {
+      date: "Q4 2025",
+      number: "03",
+      title: "AI agent infrastructure consultant",
+      description: "Our AI will evolve beyond diagram generation to become a full infrastructure consultant, monitoring your deployments, suggesting optimizations, and helping you troubleshoot issues in real-time."
+    }
+  ];
+
   return (
     <Layout>
       {/* Hero Section with gradient */}
@@ -112,7 +134,7 @@ const About = () => {
         </div>
       </section>
 
-      {/* Roadmap Section with modern glass effect */}
+      {/* Roadmap Section with modern design */}
       <section className="py-24 relative overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-br from-primary/5 via-secondary/10 to-background" />
         <div className="absolute inset-0 bg-[url('/grid.svg')] bg-center [mask-image:radial-gradient(white,transparent_85%)]" />
@@ -123,72 +145,7 @@ const About = () => {
             <p className="text-lg text-muted-foreground">Building the future of cloud architecture, one milestone at a time</p>
           </div>
           
-          <div className="max-w-4xl mx-auto">
-            <div className="bg-card/30 backdrop-blur-xl border border-border/50 rounded-2xl p-8 shadow-lg">
-              <div className="space-y-12">
-                <div className="relative flex items-start">
-                  <div className="hidden lg:flex w-32 mt-1">
-                    <span className="text-primary font-semibold px-4 py-1 bg-primary/10 rounded-full text-sm">Q2 2025</span>
-                  </div>
-                  <div className="flex-shrink-0 mr-6 relative">
-                    <div className="h-12 w-12 rounded-full bg-gradient-to-br from-primary to-primary/80 flex items-center justify-center text-white shadow-lg shadow-primary/20">
-                      <span className="font-semibold">01</span>
-                    </div>
-                    <div className="absolute h-full w-0.5 bg-gradient-to-b from-primary/50 to-transparent top-12 left-6 -ml-px"></div>
-                  </div>
-                  <div className="flex-grow pb-8">
-                    <div className="lg:hidden text-primary font-semibold px-3 py-1 bg-primary/10 rounded-full text-sm inline-block mb-2">Q2 2025</div>
-                    <h3 className="text-2xl font-semibold mb-3">Multi-cloud optimization</h3>
-                    <p className="text-muted-foreground text-lg leading-relaxed">
-                      We're building advanced AI models to optimize architectures across different cloud providers, 
-                      helping you choose the best provider for each component of your infrastructure and enabling 
-                      true multi-cloud deployments.
-                    </p>
-                  </div>
-                </div>
-                
-                <div className="relative flex items-start">
-                  <div className="hidden lg:flex w-32 mt-1">
-                    <span className="text-primary font-semibold px-4 py-1 bg-primary/10 rounded-full text-sm">Q3 2025</span>
-                  </div>
-                  <div className="flex-shrink-0 mr-6 relative">
-                    <div className="h-12 w-12 rounded-full bg-gradient-to-br from-primary to-primary/80 flex items-center justify-center text-white shadow-lg shadow-primary/20">
-                      <span className="font-semibold">02</span>
-                    </div>
-                    <div className="absolute h-full w-0.5 bg-gradient-to-b from-primary/50 to-transparent top-12 left-6 -ml-px"></div>
-                  </div>
-                  <div className="flex-grow pb-8">
-                    <div className="lg:hidden text-primary font-semibold px-3 py-1 bg-primary/10 rounded-full text-sm inline-block mb-2">Q3 2025</div>
-                    <h3 className="text-2xl font-semibold mb-3">Real-time deployment</h3>
-                    <p className="text-muted-foreground text-lg leading-relaxed">
-                      Soon you'll be able to deploy your architecture directly from Arch AI to your cloud provider 
-                      of choice. Design, test, and deploy without ever leaving the platform.
-                    </p>
-                  </div>
-                </div>
-                
-                <div className="relative flex items-start">
-                  <div className="hidden lg:flex w-32 mt-1">
-                    <span className="text-primary font-semibold px-4 py-1 bg-primary/10 rounded-full text-sm">Q4 2025</span>
-                  </div>
-                  <div className="flex-shrink-0 mr-6">
-                    <div className="h-12 w-12 rounded-full bg-gradient-to-br from-primary to-primary/80 flex items-center justify-center text-white shadow-lg shadow-primary/20">
-                      <span className="font-semibold">03</span>
-                    </div>
-                  </div>
-                  <div className="flex-grow">
-                    <div className="lg:hidden text-primary font-semibold px-3 py-1 bg-primary/10 rounded-full text-sm inline-block mb-2">Q4 2025</div>
-                    <h3 className="text-2xl font-semibold mb-3">AI agent infrastructure consultant</h3>
-                    <p className="text-muted-foreground text-lg leading-relaxed">
-                      Our AI will evolve beyond diagram generation to become a full infrastructure consultant, 
-                      monitoring your deployments, suggesting optimizations, and helping you troubleshoot issues 
-                      in real-time.
-                    </p>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
+          <RoadmapTimeline items={timelineItems} />
         </div>
       </section>
 
