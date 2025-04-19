@@ -1,4 +1,3 @@
-
 import React from 'react';
 import Layout from '@/components/layout/Layout';
 import { CheckCircle } from 'lucide-react';
@@ -84,7 +83,7 @@ const About = () => {
         </div>
       </section>
 
-      {/* Values Section - Better organized grid */}
+      {/* Values Section - With restored hover effects */}
       <section className="py-16 md:py-24 bg-gray-50 dark:bg-background border-b border-border/10">
         <div className="container-custom">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-16 mb-12">
@@ -122,11 +121,14 @@ const About = () => {
                     description: "Every feature we build starts with understanding the real needs of cloud builders."
                   }
                 ].map((value, index) => (
-                  <Card key={index} className="bg-white dark:bg-card shadow-sm border border-border/40">
+                  <Card 
+                    key={index} 
+                    className="bg-white dark:bg-card shadow-sm border border-border/40 transition-all duration-300 hover:shadow-lg hover:-translate-y-1"
+                  >
                     <CardContent className="p-6">
                       <div className="flex items-start gap-4">
                         <div className="flex-shrink-0 mt-1">
-                          <div className="h-10 w-10 rounded-full bg-primary/10 flex items-center justify-center">
+                          <div className="h-10 w-10 rounded-full bg-primary/10 flex items-center justify-center transition-transform duration-300 group-hover:scale-110">
                             <CheckCircle className="h-5 w-5 text-primary" />
                           </div>
                         </div>
