@@ -83,7 +83,7 @@ const About = () => {
         </div>
       </section>
 
-      {/* Values Section - With restored hover effects */}
+      {/* Values Section - With enhanced hover effects */}
       <section className="py-16 md:py-24 bg-gray-50 dark:bg-background border-b border-border/10">
         <div className="container-custom">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-16 mb-12">
@@ -123,17 +123,18 @@ const About = () => {
                 ].map((value, index) => (
                   <Card 
                     key={index} 
-                    className="bg-white dark:bg-card shadow-sm border border-border/40 transition-all duration-300 hover:shadow-lg hover:-translate-y-1"
+                    className="group relative overflow-hidden bg-white dark:bg-card shadow-sm border border-border/40 transition-all duration-300 hover:shadow-xl hover:-translate-y-1"
                   >
-                    <CardContent className="p-6">
+                    <div className="absolute inset-0 bg-gradient-to-r from-primary/10 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+                    <CardContent className="p-6 relative">
                       <div className="flex items-start gap-4">
                         <div className="flex-shrink-0 mt-1">
-                          <div className="h-10 w-10 rounded-full bg-primary/10 flex items-center justify-center transition-transform duration-300 group-hover:scale-110">
-                            <CheckCircle className="h-5 w-5 text-primary" />
+                          <div className="h-10 w-10 rounded-full bg-primary/10 flex items-center justify-center transform transition-all duration-300 group-hover:scale-110 group-hover:bg-primary/20">
+                            <CheckCircle className="h-5 w-5 text-primary transform transition-all duration-300 group-hover:rotate-6" />
                           </div>
                         </div>
                         
-                        <div>
+                        <div className="transform transition-all duration-300 group-hover:translate-x-1">
                           <h3 className="text-xl font-semibold mb-2">{value.title}</h3>
                           <p className="text-muted-foreground">
                             {value.description}
