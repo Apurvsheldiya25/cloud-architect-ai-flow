@@ -65,13 +65,13 @@ const Index = () => {
               Generate, edit, and deploy cloud infrastructure with zero complexity.
             </p>
             
-            <div className="flex items-center gap-3 bg-gradient-to-r from-primary/20 to-primary/30 backdrop-blur-sm rounded-full p-1.5 max-w-xl mx-auto mb-8 animate-fade-up animation-delay-300">
+            <div className="flex items-center bg-[#E5DEFF] dark:bg-primary/5 rounded-full p-2 max-w-xl mx-auto mb-8 animate-fade-up animation-delay-300">
               <input 
                 type="email"
                 placeholder="Enter your email"
-                className="flex-1 bg-transparent border-none px-4 py-2 text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-primary/50 rounded-l-full"
+                className="flex-1 bg-transparent border-none px-6 py-3 text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-0 rounded-l-full"
               />
-              <button className="px-6 py-2.5 bg-primary hover:bg-primary/90 text-white rounded-full transition-colors duration-200 flex items-center gap-2 shadow-md shadow-primary/30">
+              <button className="px-8 py-3 bg-[#7C5DF2] hover:bg-[#6B4BE1] text-white rounded-full transition-all duration-200 flex items-center gap-2 font-medium shadow-lg shadow-primary/25 hover:translate-y-[-1px]">
                 <span>Get started</span>
                 <Sparkles className="h-4 w-4" />
               </button>
