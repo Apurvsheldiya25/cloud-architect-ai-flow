@@ -30,7 +30,7 @@ const RoadmapTimeline: React.FC<RoadmapTimelineProps> = ({ items }) => {
 
   return (
     <div ref={componentRef} className="relative max-w-5xl mx-auto">
-      {/* Animated progress line */}
+      {/* Animated progress line - Fix for non-static position warning */}
       <motion.div 
         className="absolute left-8 md:left-1/2 top-0 w-1 h-full origin-top bg-primary/30"
         style={{
@@ -39,7 +39,7 @@ const RoadmapTimeline: React.FC<RoadmapTimelineProps> = ({ items }) => {
         }}
       />
       
-      <div className="space-y-24">
+      <div className="relative space-y-24">
         {items.map((item, index) => (
           <motion.div
             initial={{ opacity: 0, y: 50 }}
