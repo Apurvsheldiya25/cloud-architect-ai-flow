@@ -21,13 +21,13 @@ const CTASection: React.FC<CTASectionProps> = ({
   secondaryButtonLink
 }) => {
   return (
-    <section className="section-padding relative overflow-hidden">
+    <section className="py-24 relative overflow-hidden bg-primary/5">
       <div className="absolute inset-0 bg-gradient-radial from-primary/5 to-transparent -z-10" />
       <div className="absolute inset-0 bg-[url('/grid.svg')] bg-center [mask-image:radial-gradient(white,transparent_80%)] -z-10" />
       
-      <div className="container-custom">
+      <div className="container-custom relative">
         <div className="max-w-3xl mx-auto text-center">
-          <h2 className="text-3xl md:text-4xl font-bold font-outfit tracking-tight mb-4">
+          <h2 className="text-3xl md:text-4xl font-bold font-outfit tracking-tight mb-6">
             {title}
           </h2>
           
@@ -45,8 +45,8 @@ const CTASection: React.FC<CTASectionProps> = ({
             </Link>
             
             {secondaryButtonText && secondaryButtonLink && (
-              <Link to={secondaryButtonLink}>
-                <Button variant="outline" size="lg">
+              <Link to={secondaryButtonLink} className="group">
+                <Button variant="outline" size="lg" className="hover:bg-accent/50 transition-all duration-300">
                   {secondaryButtonText}
                 </Button>
               </Link>
