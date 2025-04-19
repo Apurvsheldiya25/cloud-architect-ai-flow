@@ -38,10 +38,9 @@ const CTASection: React.FC<CTASectionProps> = ({
           )}
           
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link to={buttonLink}>
-              <Button size="lg" className="btn-primary group">
-                <span className="relative z-10">{buttonText}</span>
-                <span className="absolute inset-0 bg-white/20 transform translate-y-full group-hover:translate-y-0 transition-transform duration-300"></span>
+            <Link to={buttonLink} className="group">
+              <Button size="lg" className="btn-primary group-hover:brightness-110 transition-all duration-300">
+                {buttonText}
               </Button>
             </Link>
             
