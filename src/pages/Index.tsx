@@ -1,3 +1,4 @@
+
 import React, { useEffect } from 'react';
 import Layout from '@/components/layout/Layout';
 import { Button } from '@/components/ui/button';
@@ -19,9 +20,9 @@ import {
   BrainCircuit,
   ExternalLink,
   Code2,
-  MicrosoftAzure,
-  GoogleCloudPlatform,
-  Kubernetes
+  Cloud,
+  Microsoft,
+  Database
 } from 'lucide-react';
 
 const Index = () => {
@@ -106,7 +107,7 @@ const Index = () => {
               {/* Azure */}
               <div className="flex flex-col items-center min-w-[200px] p-4">
                 <div className="h-12 text-[#008AD7] dark:text-[#008AD7]/90 mb-2">
-                  <MicrosoftAzure className="h-12 w-12" strokeWidth={1} />
+                  <Microsoft className="h-12 w-12" strokeWidth={1} />
                 </div>
                 <span className="text-sm font-medium">Microsoft Azure</span>
               </div>
@@ -114,7 +115,7 @@ const Index = () => {
               {/* GCP */}
               <div className="flex flex-col items-center min-w-[200px] p-4">
                 <div className="h-12 text-[#4285F4] dark:text-[#4285F4]/90 mb-2">
-                  <GoogleCloudPlatform className="h-12 w-12" strokeWidth={1} />
+                  <Cloud className="h-12 w-12" strokeWidth={1} />
                 </div>
                 <span className="text-sm font-medium">Google Cloud Platform</span>
               </div>
@@ -122,7 +123,7 @@ const Index = () => {
               {/* Kubernetes */}
               <div className="flex flex-col items-center min-w-[200px] p-4">
                 <div className="h-12 text-[#326CE5] dark:text-[#326CE5]/90 mb-2">
-                  <Kubernetes className="h-12 w-12" strokeWidth={1} />
+                  <Database className="h-12 w-12" strokeWidth={1} />
                 </div>
                 <span className="text-sm font-medium">Kubernetes</span>
               </div>
@@ -131,7 +132,7 @@ const Index = () => {
               {/* Azure */}
               <div className="flex flex-col items-center min-w-[200px] p-4">
                 <div className="h-12 text-[#008AD7] dark:text-[#008AD7]/90 mb-2">
-                  <MicrosoftAzure className="h-12 w-12" strokeWidth={1} />
+                  <Microsoft className="h-12 w-12" strokeWidth={1} />
                 </div>
                 <span className="text-sm font-medium">Microsoft Azure</span>
               </div>
