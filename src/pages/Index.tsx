@@ -6,40 +6,58 @@ import FeatureCard from '@/components/common/FeatureCard';
 import TestimonialCard from '@/components/common/TestimonialCard';
 import CTASection from '@/components/common/CTASection';
 import { Link } from 'react-router-dom';
-import { BrainCircuit, MousePointer, FileCode, MessageSquareCode, CloudCog, Zap, ShieldCheck, Users } from 'lucide-react';
+import { BrainCircuit, MousePointer, FileCode, MessageSquareCode, CloudCog, Zap, ShieldCheck, Users, Sparkles } from 'lucide-react';
 
 const Index = () => {
   return (
     <Layout>
       {/* Hero Section */}
-      <section className="py-20 md:py-28 relative overflow-hidden">
-        <div className="blueprint-bg absolute inset-0 opacity-[0.03] z-0"></div>
+      <section className="relative min-h-[90vh] flex items-center overflow-hidden">
+        <div className="absolute inset-0 hero-gradient -z-10" />
+        <div className="absolute inset-0 bg-[url('/grid.svg')] bg-center [mask-image:radial-gradient(white,transparent_80%)] -z-10" />
+        
         <div className="container-custom relative z-10">
-          <div className="max-w-3xl mx-auto text-center animate-fade-in">
-            <h1 className="heading-xl mb-6 bg-gradient-to-r from-primary to-blue-500 bg-clip-text text-transparent">
-              Design Cloud Architectures with AI in Seconds
-            </h1>
-            <p className="text-xl text-muted-foreground mb-8">
-              Generate and edit cloud infrastructure with zero complexity. Arch AI is your AI-powered cloud architect.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link to="/signup">
-                <Button size="lg">Start Building for Free</Button>
-              </Link>
-              <Link to="/features">
-                <Button variant="outline" size="lg">Explore Features</Button>
-              </Link>
+          <div className="max-w-3xl mx-auto text-center">
+            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary/10 text-primary mb-8 animate-fade-up">
+              <Sparkles className="h-4 w-4" />
+              <span className="text-sm font-medium">AI-Powered Cloud Architecture</span>
             </div>
             
-            <div className="mt-12 relative">
-              <div className="absolute -inset-0.5 bg-gradient-to-r from-blue-500 to-primary rounded-xl opacity-20 blur-sm"></div>
-              <div className="relative bg-card border border-border shadow-xl rounded-xl overflow-hidden">
-                <img 
-                  src="https://images.unsplash.com/photo-1488590528505-98d2b5aba04b?auto=format&fit=crop&w=1200&h=630" 
-                  alt="Arch AI Cloud Architecture Interface" 
-                  className="w-full rounded-xl"
-                />
-              </div>
+            <h1 className="heading-xl mb-6 animate-fade-up [--delay:200ms]">
+              Design Cloud Architectures
+              <br />
+              with AI in Seconds
+            </h1>
+            
+            <p className="text-xl text-muted-foreground mb-8 animate-fade-up [--delay:400ms]">
+              Generate, edit, and deploy cloud infrastructure with zero complexity.
+              Arch AI is your AI-powered cloud architect.
+            </p>
+            
+            <div className="flex flex-col sm:flex-row gap-4 justify-center animate-fade-up [--delay:600ms]">
+              <Link to="/signup">
+                <Button size="lg" className="btn-primary group">
+                  Start Building for Free
+                  <span className="group-hover:translate-x-1 transition-transform">
+                    →
+                  </span>
+                </Button>
+              </Link>
+              <Link to="/features">
+                <Button variant="outline" size="lg">
+                  Explore Features
+                </Button>
+              </Link>
+            </div>
+          </div>
+
+          <div className="mt-16 max-w-5xl mx-auto animate-float">
+            <div className="glass-card p-1">
+              <img 
+                src="/lovable-uploads/5cfaafc5-d6a3-4174-aefe-2444540383e1.png"
+                alt="Arch AI Interface"
+                className="w-full rounded-xl shadow-2xl"
+              />
             </div>
           </div>
         </div>
