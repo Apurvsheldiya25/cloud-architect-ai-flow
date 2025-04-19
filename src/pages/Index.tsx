@@ -1,3 +1,4 @@
+
 import React, { useEffect } from 'react';
 import Layout from '@/components/layout/Layout';
 import { Button } from '@/components/ui/button';
@@ -290,3 +291,23 @@ const Index = () => {
             />
             <TestimonialCard 
               quote="This is like ChatGPT + AWS console combined. I can explain what I need and get not just a diagram but working infrastructure code."
+              author="Michael Rodriguez"
+              role="Cloud Architect"
+              company="DataFlow Systems"
+            />
+          </div>
+        </div>
+      </section>
+      
+      {/* CTA Section */}
+      <CTASection 
+        title="Ready to transform your cloud infrastructure workflow?"
+        subtitle="Join thousands of teams accelerating their cloud architecture design with AI."
+        buttonText="Get Started for Free"
+        buttonLink="/signup"
+      />
+    </Layout>
+  );
+};
+
+export default Index;
