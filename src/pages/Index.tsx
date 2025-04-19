@@ -18,7 +18,10 @@ import {
   Sparkles,
   BrainCircuit,
   ExternalLink,
-  Code2
+  Code2,
+  MicrosoftAzure,
+  GoogleCloudPlatform,
+  Kubernetes
 } from 'lucide-react';
 
 const Index = () => {
@@ -100,23 +103,10 @@ const Index = () => {
 
           <div className="flex overflow-hidden relative">
             <div className="flex animate-infinite-scroll gap-12 items-center">
-              {/* AWS */}
-              <div className="flex flex-col items-center min-w-[200px] p-4">
-                <div className="h-12 text-[#FF9900] dark:text-[#FF9900]/90 mb-2">
-                  <svg className="h-full" viewBox="0 0 126 48" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M18.53 31.43c-5.184 3.787-13.08 5.813-19.76 5.813-9.338 0-17.76-3.413-24.134-9.12-.518-.453-.066-1.08.547-.733 7 4.227 15.64 6.667 24.534 6.667 6.013 0 12.667-1.254 18.76-3.813.92-.4 1.694.613.853 1.187z" fill="currentColor"/>
-                    <path d="M20.693 28.667c-.667-.853-4.4-.4-6.093-.2-.507.066-.587-.387-.133-.72 3-.2 7.93-1.413 7.333-2.667-.613-1.347-7.333-3.467-13.44-.187-.96.453-1.907.667-1.64.067 1.8-1.547 7.813-5.387 15.44-3.787.8.187 1.453.827.96 1.56-1.24 1.84-3.8 9.333-2.427 5.933z" fill="currentColor"/>
-                  </svg>
-                </div>
-                <span className="text-sm font-medium">Amazon Web Services</span>
-              </div>
-
               {/* Azure */}
               <div className="flex flex-col items-center min-w-[200px] p-4">
                 <div className="h-12 text-[#008AD7] dark:text-[#008AD7]/90 mb-2">
-                  <svg className="h-full" viewBox="0 0 150 31" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M43.2 3.5h11.4a1 1 0 011 .9V27a1 1 0 01-.8 1H43.4a1.1 1.1 0 01-1-1.1V4.6c0-.6.4-1.1 1-1.1zm3.5 3.7v16h4.5V7.2h-4.5z" fill="currentColor"/>
-                  </svg>
+                  <MicrosoftAzure className="h-12 w-12" strokeWidth={1} />
                 </div>
                 <span className="text-sm font-medium">Microsoft Azure</span>
               </div>
@@ -124,9 +114,7 @@ const Index = () => {
               {/* GCP */}
               <div className="flex flex-col items-center min-w-[200px] p-4">
                 <div className="h-12 text-[#4285F4] dark:text-[#4285F4]/90 mb-2">
-                  <svg className="h-full" viewBox="0 0 600 100" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M50 50h38.8v-6.43H50V50zm134.7-30.71L175 30 50 50H0v50h50l125 20 10-10.7V19.29z" fill="currentColor"/>
-                  </svg>
+                  <GoogleCloudPlatform className="h-12 w-12" strokeWidth={1} />
                 </div>
                 <span className="text-sm font-medium">Google Cloud Platform</span>
               </div>
@@ -134,32 +122,18 @@ const Index = () => {
               {/* Kubernetes */}
               <div className="flex flex-col items-center min-w-[200px] p-4">
                 <div className="h-12 text-[#326CE5] dark:text-[#326CE5]/90 mb-2">
-                  <svg className="h-full" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M15.9.9l13.8 4.8v14.8l-13.8 4.8L2.1 20.5V5.7L15.9.9z" fill="currentColor"/>
-                  </svg>
+                  <Kubernetes className="h-12 w-12" strokeWidth={1} />
                 </div>
                 <span className="text-sm font-medium">Kubernetes</span>
               </div>
 
-              {/* Terraform */}
-              <div className="flex flex-col items-center min-w-[200px] p-4">
-                <div className="h-12 text-[#7B42BC] dark:text-[#7B42BC]/90 mb-2">
-                  <svg className="h-full" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M12.09.282L.5 6.972v12.63l11.59 6.69V.282z" fill="currentColor"/>
-                  </svg>
-                </div>
-                <span className="text-sm font-medium">Terraform</span>
-              </div>
-
               {/* Duplicate for infinite scroll */}
-              {/* AWS */}
+              {/* Azure */}
               <div className="flex flex-col items-center min-w-[200px] p-4">
-                <div className="h-12 text-[#FF9900] dark:text-[#FF9900]/90 mb-2">
-                  <svg className="h-full" viewBox="0 0 126 48" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M18.53 31.43c-5.184 3.787-13.08 5.813-19.76 5.813-9.338 0-17.76-3.413-24.134-9.12-.518-.453-.066-1.08.547-.733 7 4.227 15.64 6.667 24.534 6.667 6.013 0 12.667-1.254 18.76-3.813.92-.4 1.694.613.853 1.187z" fill="currentColor"/>
-                  </svg>
+                <div className="h-12 text-[#008AD7] dark:text-[#008AD7]/90 mb-2">
+                  <MicrosoftAzure className="h-12 w-12" strokeWidth={1} />
                 </div>
-                <span className="text-sm font-medium">Amazon Web Services</span>
+                <span className="text-sm font-medium">Microsoft Azure</span>
               </div>
             </div>
           </div>
