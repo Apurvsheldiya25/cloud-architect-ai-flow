@@ -1,4 +1,5 @@
-import React from 'react';
+
+import React, { useEffect } from 'react';
 import Layout from '@/components/layout/Layout';
 import { Button } from '@/components/ui/button';
 import SectionHeading from '@/components/common/SectionHeading';
@@ -6,15 +7,48 @@ import FeatureCard from '@/components/common/FeatureCard';
 import TestimonialCard from '@/components/common/TestimonialCard';
 import CTASection from '@/components/common/CTASection';
 import { Link } from 'react-router-dom';
-import { BrainCircuit, MousePointer, FileCode, MessageSquareCode, CloudCog, Zap, ShieldCheck, Users, Sparkles } from 'lucide-react';
+import { 
+  MousePointer, 
+  FileCode, 
+  MessageSquareCode, 
+  CloudCog, 
+  Zap, 
+  ShieldCheck, 
+  Users, 
+  Sparkles,
+  BrainCircuit,
+  ExternalLink,
+  Code2
+} from 'lucide-react';
 
 const Index = () => {
+  // Intersection Observer for scroll animations
+  useEffect(() => {
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('is-visible');
+        }
+      });
+    }, { threshold: 0.1 });
+
+    document.querySelectorAll('.animate-on-scroll').forEach(el => {
+      observer.observe(el);
+    });
+
+    return () => {
+      document.querySelectorAll('.animate-on-scroll').forEach(el => {
+        observer.unobserve(el);
+      });
+    };
+  }, []);
+
   return (
     <Layout>
       {/* Hero Section */}
-      <section className="relative min-h-[90vh] flex items-center overflow-hidden">
-        <div className="absolute inset-0 hero-gradient -z-10" />
-        <div className="absolute inset-0 bg-[url('/grid.svg')] bg-center [mask-image:radial-gradient(white,transparent_80%)] -z-10" />
+      <section className="relative min-h-screen pt-28 flex items-center">
+        <div className="absolute inset-0 bg-gradient-radial from-primary/5 to-transparent -z-10" />
+        <div className="absolute inset-0 bg-[url('/grid.svg')] bg-center [mask-image:radial-gradient(white,transparent_85%)] -z-10" />
         
         <div className="container-custom relative z-10">
           <div className="max-w-3xl mx-auto text-center">
@@ -23,43 +57,42 @@ const Index = () => {
               <span className="text-sm font-medium">AI-Powered Cloud Architecture</span>
             </div>
             
-            <h1 className="heading-xl mb-6 animate-fade-up [--delay:200ms]">
-              Design Cloud Architectures
-              <br />
-              with AI in Seconds
+            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold font-outfit tracking-tight mb-6 animate-fade-up animation-delay-100">
+              Design Cloud Architectures<br />
+              <span className="gradient-text">with AI in Seconds</span>
             </h1>
             
-            <p className="text-xl text-muted-foreground mb-8 animate-fade-up [--delay:400ms]">
+            <p className="text-xl text-muted-foreground mb-8 animate-fade-up animation-delay-200">
               Generate, edit, and deploy cloud infrastructure with zero complexity.
               Arch AI is your AI-powered cloud architect.
             </p>
             
-            <div className="flex flex-col sm:flex-row gap-4 justify-center animate-fade-up [--delay:600ms]">
+            <div className="flex flex-col sm:flex-row gap-4 justify-center animate-fade-up animation-delay-300">
               <Link to="/signup">
-                <Button size="lg" className="btn-primary group">
-                  Start Building for Free
-                  <span className="group-hover:translate-x-1 transition-transform">
-                    →
-                  </span>
+                <Button size="lg" className="btn-primary group relative overflow-hidden">
+                  <span className="relative z-10">Start Building for Free</span>
+                  <span className="absolute inset-0 bg-white/20 transform translate-y-full group-hover:translate-y-0 transition-transform duration-300"></span>
                 </Button>
               </Link>
               <Link to="/features">
-                <Button variant="outline" size="lg">
+                <Button variant="outline" size="lg" className="group">
                   Explore Features
+                  <ExternalLink className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
                 </Button>
               </Link>
             </div>
           </div>
 
-          <div className="mt-16 max-w-5xl mx-auto animate-float">
+          <div className="mt-16 max-w-5xl mx-auto animate-fade-up animation-delay-400">
             <div className="relative group">
-              <div className="absolute -inset-1 bg-gradient-to-r from-primary/20 to-purple-500/20 rounded-xl blur-lg group-hover:blur-xl transition-all duration-300"></div>
+              <div className="absolute -inset-0.5 bg-gradient-to-r from-primary to-indigo-600 rounded-xl opacity-75 blur-lg group-hover:opacity-100 transition-all duration-500 group-hover:duration-200 animate-pulse-glow"></div>
               <div className="relative">
                 <img 
                   src="/lovable-uploads/5cfaafc5-d6a3-4174-aefe-2444540383e1.png"
                   alt="Arch AI Interface"
-                  className="w-full rounded-xl shadow-[0_8px_32px_-8px_rgba(0,0,0,0.3)] border border-white/10 backdrop-blur-xl transition-transform duration-300 group-hover:scale-[1.01]"
+                  className="w-full rounded-xl shadow-[0_8px_40px_-12px_rgba(0,0,0,0.3)] border border-white/20 bg-card/30 backdrop-blur-sm transition-all duration-300 group-hover:shadow-[0_8px_60px_-8px_rgba(79,70,229,0.5)]"
                 />
+                <div className="absolute inset-0 rounded-xl ring-1 ring-inset ring-white/10 transition-opacity group-hover:opacity-0"></div>
               </div>
             </div>
           </div>
@@ -98,7 +131,7 @@ const Index = () => {
       </section>
 
       {/* How It Works */}
-      <section className="section-padding">
+      <section className="section-padding animate-on-scroll">
         <div className="container-custom">
           <SectionHeading 
             title="How It Works"
@@ -106,41 +139,48 @@ const Index = () => {
             centered={true}
           />
           
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <div className="text-center">
-              <div className="bg-primary/10 h-16 w-16 rounded-full flex items-center justify-center mx-auto mb-6">
-                <span className="text-primary font-bold text-2xl">1</span>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mt-16">
+            <div className="text-center transform transition-all duration-500 hover:translate-y-[-8px]">
+              <div className="relative mx-auto mb-6">
+                <div className="absolute inset-0 bg-primary/20 rounded-full blur-md"></div>
+                <div className="relative bg-primary/10 h-16 w-16 rounded-full flex items-center justify-center mx-auto border border-primary/30">
+                  <span className="text-primary font-bold text-2xl">1</span>
+                </div>
               </div>
-              <h3 className="font-semibold text-xl mb-3">Describe your needs with a prompt</h3>
+              <h3 className="font-semibold text-xl mb-3 font-outfit">Describe your needs with a prompt</h3>
               <p className="text-muted-foreground">Tell Arch AI what you need in plain language, just like you'd explain it to a colleague.</p>
             </div>
             
-            <div className="text-center">
-              <div className="bg-primary/10 h-16 w-16 rounded-full flex items-center justify-center mx-auto mb-6">
-                <span className="text-primary font-bold text-2xl">2</span>
+            <div className="text-center transform transition-all duration-500 hover:translate-y-[-8px]">
+              <div className="relative mx-auto mb-6">
+                <div className="absolute inset-0 bg-primary/20 rounded-full blur-md"></div>
+                <div className="relative bg-primary/10 h-16 w-16 rounded-full flex items-center justify-center mx-auto border border-primary/30">
+                  <span className="text-primary font-bold text-2xl">2</span>
+                </div>
               </div>
-              <h3 className="font-semibold text-xl mb-3">Arch AI instantly generates a cloud architecture</h3>
+              <h3 className="font-semibold text-xl mb-3 font-outfit">Arch AI instantly generates a cloud architecture</h3>
               <p className="text-muted-foreground">Watch as Arch AI creates a complete infrastructure diagram based on best practices.</p>
             </div>
             
-            <div className="text-center">
-              <div className="bg-primary/10 h-16 w-16 rounded-full flex items-center justify-center mx-auto mb-6">
-                <span className="text-primary font-bold text-2xl">3</span>
+            <div className="text-center transform transition-all duration-500 hover:translate-y-[-8px]">
+              <div className="relative mx-auto mb-6">
+                <div className="absolute inset-0 bg-primary/20 rounded-full blur-md"></div>
+                <div className="relative bg-primary/10 h-16 w-16 rounded-full flex items-center justify-center mx-auto border border-primary/30">
+                  <span className="text-primary font-bold text-2xl">3</span>
+                </div>
               </div>
-              <h3 className="font-semibold text-xl mb-3">You edit and export to code or deploy</h3>
+              <h3 className="font-semibold text-xl mb-3 font-outfit">You edit and export to code or deploy</h3>
               <p className="text-muted-foreground">Fine-tune your diagram and export directly to Terraform, CloudFormation, or other formats.</p>
             </div>
           </div>
           
-          <div className="mt-16 max-w-5xl mx-auto">
-            <div className="relative">
-              <div className="absolute -inset-0.5 bg-gradient-to-r from-blue-500 to-primary rounded-xl opacity-10 blur-sm"></div>
-              <div className="relative rounded-xl overflow-hidden border border-border">
-                <img 
-                  src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=1600&h=900" 
-                  alt="Cloud Architecture Workflow" 
-                  className="w-full"
-                />
+          <div className="mt-16 max-w-5xl mx-auto animate-on-scroll">
+            <div className="relative group rounded-xl overflow-hidden">
+              <div className="absolute -inset-0.5 bg-gradient-to-r from-blue-500 to-primary rounded-xl opacity-75 blur-lg group-hover:opacity-100 transition-all duration-300"></div>
+              <div className="relative rounded-xl overflow-hidden border border-white/10">
+                <div className="aspect-video bg-card/60 backdrop-blur-sm flex items-center justify-center">
+                  <BrainCircuit className="h-16 w-16 text-primary/50" />
+                </div>
               </div>
             </div>
           </div>
@@ -148,7 +188,7 @@ const Index = () => {
       </section>
 
       {/* Core Features */}
-      <section className="section-padding bg-secondary">
+      <section className="section-padding bg-secondary animate-on-scroll">
         <div className="container-custom">
           <SectionHeading 
             title="Core Features"
@@ -156,21 +196,25 @@ const Index = () => {
             centered={true}
           />
           
-          <div className="grid-feature">
-            {/* Update the icon here */}
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mt-16">
             <FeatureCard 
               icon={MousePointer}
-              title="Drag-and-Drop Node Editor"
+              title="Drag-and-Drop Editor"
               description="Easily customize your architecture with an intuitive drag-and-drop interface designed for technical and non-technical users."
             />
             <FeatureCard 
               icon={FileCode}
-              title="Export to Terraform or CloudFormation"
-              description="Convert your diagrams directly to infrastructure as code with one click - no manual translation needed."
+              title="Infrastructure as Code"
+              description="Convert your diagrams directly to Terraform or CloudFormation with one click - no manual translation needed."
+            />
+            <FeatureCard 
+              icon={Code2}
+              title="Best Practice Templates"
+              description="Start with industry-standard architecture patterns and customize to your needs."
             />
             <FeatureCard 
               icon={MessageSquareCode}
-              title="Guide AI Assistant Panel"
+              title="AI Assistant Guide"
               description="Get expert suggestions and best practices while you work, with our AI assistant that understands cloud architecture."
             />
             <FeatureCard 
@@ -188,7 +232,7 @@ const Index = () => {
       </section>
 
       {/* Benefits Section */}
-      <section className="section-padding">
+      <section className="section-padding animate-on-scroll">
         <div className="container-custom">
           <SectionHeading 
             title="Benefits"
@@ -196,28 +240,28 @@ const Index = () => {
             centered={true}
           />
           
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <div className="bg-card p-8 rounded-xl border border-border shadow-sm">
-              <div className="bg-primary/10 p-3 rounded-lg w-fit mb-5">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mt-16">
+            <div className="bg-card p-8 rounded-xl border border-border shadow-sm hover:shadow-md transition-all duration-300 hover:translate-y-[-4px]">
+              <div className="bg-primary/10 p-3 rounded-lg w-fit mb-5 ring-1 ring-primary/30">
                 <Zap className="h-6 w-6 text-primary" />
               </div>
-              <h3 className="font-semibold text-xl mb-4">Plan 10x faster</h3>
+              <h3 className="font-semibold text-xl mb-4 font-outfit">Plan 10x faster</h3>
               <p className="text-muted-foreground">Go from initial idea to detailed cloud architecture in minutes instead of days. Accelerate your planning cycle and delivery timelines.</p>
             </div>
             
-            <div className="bg-card p-8 rounded-xl border border-border shadow-sm">
-              <div className="bg-primary/10 p-3 rounded-lg w-fit mb-5">
+            <div className="bg-card p-8 rounded-xl border border-border shadow-sm hover:shadow-md transition-all duration-300 hover:translate-y-[-4px]">
+              <div className="bg-primary/10 p-3 rounded-lg w-fit mb-5 ring-1 ring-primary/30">
                 <ShieldCheck className="h-6 w-6 text-primary" />
               </div>
-              <h3 className="font-semibold text-xl mb-4">Reduce architecture errors</h3>
+              <h3 className="font-semibold text-xl mb-4 font-outfit">Reduce architecture errors</h3>
               <p className="text-muted-foreground">Our AI ensures your architectures follow cloud best practices, security guidelines, and cost optimization principles automatically.</p>
             </div>
             
-            <div className="bg-card p-8 rounded-xl border border-border shadow-sm">
-              <div className="bg-primary/10 p-3 rounded-lg w-fit mb-5">
+            <div className="bg-card p-8 rounded-xl border border-border shadow-sm hover:shadow-md transition-all duration-300 hover:translate-y-[-4px]">
+              <div className="bg-primary/10 p-3 rounded-lg w-fit mb-5 ring-1 ring-primary/30">
                 <Users className="h-6 w-6 text-primary" />
               </div>
-              <h3 className="font-semibold text-xl mb-4">Collaborate with teams</h3>
+              <h3 className="font-semibold text-xl mb-4 font-outfit">Collaborate with teams</h3>
               <p className="text-muted-foreground">Share, edit, and discuss cloud architectures with stakeholders. Bridge the gap between technical and non-technical team members.</p>
             </div>
           </div>
@@ -225,7 +269,7 @@ const Index = () => {
       </section>
 
       {/* Testimonials */}
-      <section className="section-padding bg-secondary">
+      <section className="section-padding bg-secondary animate-on-scroll">
         <div className="container-custom">
           <SectionHeading 
             title="What People Are Saying"
@@ -233,7 +277,7 @@ const Index = () => {
             centered={true}
           />
           
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto mt-16">
             <TestimonialCard 
               quote="Arch AI saved our team 15+ hours per sprint. We went from whiteboarding for days to having a solid architecture in hours."
               author="Sarah Chen"

@@ -21,6 +21,7 @@ export default {
 		extend: {
 			fontFamily: {
 				inter: ['Inter', 'sans-serif'],
+				outfit: ['Outfit', 'sans-serif'],
 			},
 			colors: {
 				border: 'hsl(var(--border))',
@@ -82,15 +83,22 @@ export default {
 					from: { transform: "translateY(20px)", opacity: "0" },
 					to: { transform: "translateY(0)", opacity: "1" },
 				},
+				"pulse-glow": {
+					"0%, 100%": { opacity: "0.6" },
+					"50%": { opacity: "1" },
+				},
 			},
 			animation: {
 				"accordion-down": "accordion-down 0.2s ease-out",
 				"accordion-up": "accordion-up 0.2s ease-out",
 				"fade-in": "fade-in 0.5s ease-out",
 				"slide-in-from-bottom": "slide-in-from-bottom 0.5s ease-out",
+				"pulse-glow": "pulse-glow 2s cubic-bezier(0.4, 0, 0.6, 1) infinite",
 			},
+			backgroundImage: {
+				'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
+			}
 		}
 	},
 	plugins: [require("tailwindcss-animate")],
 } satisfies Config;
-
