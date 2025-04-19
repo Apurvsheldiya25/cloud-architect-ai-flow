@@ -1,4 +1,3 @@
-
 import React, { useEffect } from 'react';
 import Layout from '@/components/layout/Layout';
 import { Button } from '@/components/ui/button';
@@ -108,7 +107,7 @@ const Index = () => {
             centered={true}
           />
           
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mt-16">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mt-16 px-4 md:px-8">
             <ProcessCard
               number={1}
               title="Describe your needs with a prompt"
